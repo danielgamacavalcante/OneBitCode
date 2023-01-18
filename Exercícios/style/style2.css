@@ -1,0 +1,36 @@
+@charset "UTF-8";
+* {
+}
+.main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1e20;
+}
+.header a {
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+}
+nav a:hover {
+  color: aqua;
+}
+#imglogo {
+  max-height: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
