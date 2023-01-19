@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 3</title>
+    <link rel="stylesheet" href="style/space_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="siteexemplo.html" target="_parent"
+        ><img src="imgs/logo.png" alt=""
+      /></a>
+      <nav>
+        <a href="siteexemplo2.html" target="_parent">The Spaceships</a>
+        <a href="siteexemplo3.html" target="_self">Hire Us</a>
+      </nav>
+    </header>
+    <hr />
+    <section>
+      <form action="">
+        <h1>Cadastero de liga dos Astronautas</h1>
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          size="40"
+          required
+        /><br /><br />
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" /> -
+        <label for="password">Senha:</label>
+        <input type="password" id="password" /> <br />
+        <br />
+        <label for="data">Data nascimento:</label>
+        <input type="date" id="data" /> - Gênero:
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" value="masculino" name="genero" />
+        <label for="feminino">Feminino</label>
+        <input type="radio" id="feminino" value="feminino" name="genero" />
+        <br />
+        <br />
+        <label for="nacionalidades">Nacionalidades:</label>
+        <input list="nacionalidades" />
+        <datalist id="nacionalidades">
+          <option value="Brasileiro"></option>
+          <option value="Russo"></option>
+          <option value="Argentino"></option>
+          <option value="Argentino"></option>
+          <option value="Americando"></option>
+          <option value="Chines"></option>
+          <option value="Japones"></option>
+          <option value="Italiano"></option>
+        </datalist>
+        <h3>Suas principais qualidades:</h3>
+        <label for="inteligencia">Inteligência:</label>
+        <input type="checkbox" name="inteligencia" id="inteligencia" /> |
+        <label for="resiliencia">Resiliência:</label>
+        <input type="checkbox" name="resiliencia" id="resiliencia" /> |
+        <label for="fisico">Preparo Físico:</label>
+        <input type="checkbox" name="fisico" id="fisico" /> |
+        <label for="educacao">Educação:</label>
+        <input type="checkbox" name="educacao" id="educacao" /> <br />
+        <br />
+        <textarea style="height: 150px; width: 250px"> </textarea> <br />
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+  </body>
+</html>
