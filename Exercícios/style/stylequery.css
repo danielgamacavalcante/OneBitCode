@@ -9,11 +9,19 @@
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 1024px) {
+  .img-content {
+    height: 70vh;
+  }
+  .text-content {
+    font-size: 16px;
+  }
+}
 
 @media (max-width: 785px) {
   .img-content {
     width: 100%;
-    height: auto;
+    height: 70vh;
   }
   h1 {
     text-align: center;
@@ -22,5 +30,23 @@
   }
   .text-content {
     font-size: 16px;
+  }
+}
+@media (max-width: 677px) {
+  .img-content {
+    width: 100%;
+  }
+  .text-content {
+    font-size: 16px;
+  }
+}
+@media (max-width: 556px) {
+  .img-content {
+    width: 100%;
+    height: 30%;
+  }
+  .text-content {
+    text-align: justify;
+    font-size: 15px;
   }
 }
