@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background-color: darkgray;
+  display: flex;
+  /*flex-direction: column; direction: Row e Collum and reverse*/
+  gap: 0px 15px; /*gap: Row e Collum*/
+  /*column-gap: ;
+  row-gap: ;*/
+  justify-content: center; /*center; flex-end; flex-start, space-around, space-between,space-evenly */
+  align-items: center; /*center; flex-end; flex-start, stretch (alogamento)*/
+  /*flex-wrap: wrap; ajuste automático, wrap e wrap-reverse*/
+}
+
+.item {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-basis: 200px; Tamanho Base tem que tirar o width, aceita %  se tela não enquadrar item neste tamanho ele 
+  redimensiona com wrap e auto pra ficar da largura automaticamente*/
+  /*flex-grow: 0; aumentar o tamanho dos itens por igual sem que eles quebrem, 0 normal e 1 maior*/
+}
+/*-------------------------------------*/
+.item1 {
+  /* flex-grow: 2; aqui eu coloquei o peso maior pro item um então os demais teriam 1 e esse seria maior em tela */
+  /*flex-shrink: 2; usado para quando eu quero diminuir um item mais do que os outros por padrão todos são 1, 
+  agora se eu não quero diminuir uso 0*/
+}
+.item2 {
+  /*flex: 1 0 200px;  flex: flex-grow; flex-shrink; flex-basis */
+  /* order: ; serve pra ordenar o item dentro da flexbox*/
+  align-self: flex-end; /* Alinhamento próprio na vertical. flex-end; flex-start; center */
+}
+.item3 {
+}
+
+@media (max-width: 390px) {
+  .item2 {
+    flex: 1 0 620px;
+  }
+}
