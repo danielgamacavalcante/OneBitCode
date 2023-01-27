@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Grid</title>
+    <style>
+      @charset "UTF-8";
+      @font-face {
+        font-family: "Playfair";
+        src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf)
+            format("truetype"),
+          url(../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf)
+            format("truetype");
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* =================================================HEADER======================================== */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 10px;
+      }
+      .header img {
+        height: 80px;
+      }
+      .menu-header {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px;
+      }
+      .menu-header:hover {
+        border-bottom: 2px solid white;
+      }
+      /* =================================================Banner======================================== */
+      .banner {
+        text-align: center;
+      }
+      .banner h1 {
+        font-family: "Playfair";
+        font-weight: normal;
+      }
+      /* =================================================CONTAINER======================================== */
+      .container {
+        display: grid;
+      }
+      /* =================================================MAIN======================================== */
+      .main {
+        display: flex;
+        gap: 50px;
+      }
+      /* =================================================SECTION======================================== */
+      .section {
+        width: 70vw;
+        text-align: justify;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .section p {
+        font-family: "Dancing Script", cursive;
+        text-align: justify;
+      }
+      .section a {
+        text-decoration: none;
+        color: black;
+      }
+      .section .titulo-img {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .item {
+        text-align: center;
+        display: grid;
+        padding-top: 20px;
+        width: 20vw;
+      }
+      .item img {
+        height: 30vh;
+        border-radius: 20px;
+        width: 200px;
+      }
+      /* =================================================ASIDE======================================== */
+      .aside {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: darkgrey;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+      .aside h1 {
+        font-size: 20px;
+        color: white;
+        text-shadow: 1px 0px 3px black;
+      }
+      /* =================================================FOOTER======================================== */
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 10px;
+      }
+      .footer img {
+        height: 50px;
+      }
+      .footer p {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="img/logo-onebitcode.svg" alt="" />
+        <nav>
+          <a class="menu-header" href="#">Login</a>
+          <a class="menu-header" href="#">Cadastro</a>
+          <a class="menu-header" href="#">FAQ</a>
+        </nav>
+      </header>
+      <div class="banner">
+        <h1>BEM VINDO AO ONEBITSPORT</h1>
+        <h3>
+          Aqui é onde você encontra os itens mais novos e modernos do seu
+          esporte preferido
+        </h3>
+      </div>
+
+      <main class="main">
+        <section class="section">
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>
+                Texto do Um dos esportes de lutas marciais mais praticados e
+                consagrados no mundo inteiro. Veja o que há de novo a respeito
+                deste esporte.
+              </p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>
+                Alavancando muitos adébitos, este esporte está conquistando seu
+                espaço. Porém, o mesmo apresenta risco se não ensinado por
+                profissionais. Veja mais aqui.
+              </p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>
+                Um dos esportes mais completos para o seu corpo o futebol
+                amaricano incorpora tudo que há de bom, porém, tendo muitas
+                lesões por impacto e esforço repetido. Veja mais aqui.
+              </p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/boxe.jpg" alt="" />
+              <p class="titulo-img">Título</p>
+              <p>
+                Um dos esportes mais completos para o seu corpo o futebol
+                amaricano incorpora tudo que há de bom, porém, tendo muitas
+                lesões por impacto e esforço repetido. Veja mais aqui.
+              </p>
+            </a>
+          </div>
+        </section>
+        <!-- ============================================ASIDE========================================================= -->
+        <aside class="aside">
+          <div class="item">
+            <h1>OUTRAS CATEGORIAS</h1>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/basquete.jpg" alt="" />
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="img/basquete.jpg" alt="" />
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/basquete.jpg" alt="" />
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="img/basquete.jpg" alt="" />
+              <p>Texto do ITEM</p>
+            </a>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <img src="img/logo-onebitcode.svg" alt="" />
+        <p>VOLTAR AO TOPO</p>
+      </footer>
+    </div>
+  </body>
+</html>
