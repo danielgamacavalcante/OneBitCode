@@ -5,20 +5,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.container {
-  height: 100%;
+body {
   background-color: darkgray;
+}
+.container {
+  height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 3fr 1fr 1fr;
   gap: 10px;
-  padding: 10px;
-  /* grid-template-rows: 1fr 2fr; */
-  grid-auto-rows: minmax(400px, 99%);
+  grid-auto-rows: minmax(270px, auto);
 }
 
 .item {
   background-color: white;
   border: 2px solid black;
   padding: 10px;
+}
+@media (max-width: 1011px) {
+  .container {
+    grid-auto-rows: 450px;
+  }
 }
