@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex e Grid</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .logoNavBar {
+        width: 180px;
+      }
+      .header {
+        width: 100%;
+        min-height: 40px;
+        /*Quando quebrar o header ele jogara os itens para baixo por ter o mínimode 40px  */
+        background-color: #292929;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 30px;
+        gap: 8px 15px;
+      }
+      .headerBtnGroup {
+      }
+      .navBtn {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 6px;
+        margin: 10px;
+        transition: 0.3s;
+      }
+      .navBtn:hover {
+        border-bottom: 2px solid white;
+      }
+      .sectionTitle {
+        font-weight: normal;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-top: 20px;
+      }
+      .sectionDescription {
+        text-align: center;
+        color: #383838;
+      }
+      .gridContainer {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: "mainContent sideBarContent";
+        padding: 20px;
+        flex: 1 0 auto;
+        /* Flex para usa todo o espaço definido, só pode ser usado por container ser flex */
+      }
+      .mainCardImg {
+        width: 100%;
+        height: 180px;
+        border-radius: 10px;
+      }
+      .sidebarCardImg {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .categoryCard {
+        width: 280px;
+        height: 380px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      .categoryCard:hover {
+        border-color: black;
+      }
+      .mainCategoryCardTitle {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 6px;
+      }
+      .mainCategoryCardDescription {
+        padding: 6px;
+      }
+      .mainContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        grid-area: mainContent;
+      }
+      .sidebarContent {
+        background-color: #383838;
+        color: white;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 300px;
+        grid-area: sideBarContent;
+        gap: 20px;
+      }
+      .sidebarCard {
+        width: 75%;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      .sidebarCard:hover {
+        border: 1px solid white;
+      }
+      .sidebarCardTitle {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          src="img/logo-onebitcode.svg"
+          alt="logo-header"
+          class="logoNavBar"
+        />
+        <div>
+          <nav class="headerBtnGroup">
+            <a href="" class="navBtn">Login</a>
+            <a href="" class="navBtn"> Registro</a>
+            <a href="" class="navBtn">FAQ</a>
+          </nav>
+        </div>
+      </header>
+      <h1 class="sectionTitle" id="backToTop">BEM VINDO A ONEBITSPORSTS!</h1>
+      <p class="sectionDescription">
+        Aqui é onde você encontra todos os itens mais novos e modernos do seu
+        esporte preferido.
+      </p>
+      <section class="gridContainer">
+        <div class="mainContent">
+          <div class="categoryCard">
+            <img src="img/boxe.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">BOXE</p>
+            <p class="mainCategoryCardDescription">
+              Um dos esportes de lutas marciais mais praticados e consagrados no
+              mundo inteiro. Veja o que há de novo a respeito deste esporte.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/crossfit.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">CROSSFIT</p>
+            <p class="mainCategoryCardDescription">
+              Alavancando muitos adébitos, este esporte está conquistando seu
+              espaço. Porém, o mesmo apresenta risco se não ensinado por
+              profissionais. Veja mais aqui.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/natacao.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">NATAÇÃO</p>
+            <p class="mainCategoryCardDescription">
+              Um dos esportes mais completos para o seu corpo a natação
+              incorpora tudo que há de bom, evitando muitas lesões por impacto e
+              esforço repetido. Veja os principais benefícios deste esporte.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/roupas.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">ROUPAS</p>
+            <p class="mainCategoryCardDescription">
+              As melhores roupas para se exercitar estão aqui e suas principais
+              marcas também. De esportes ao ar livre até em locais fechados.
+              Veja mais clicando aqui.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/basquete.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">BASQUETE</p>
+            <p class="mainCategoryCardDescription">
+              O basquete é um esporte consagrado mundialmente detendor de
+              maiores salários. É um ótimo esporte para aeróbica que lhe mantei
+              um constante movimento. Veja mais clicando aqui.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/corrida.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">CORRIDA</p>
+            <p class="mainCategoryCardDescription">
+              A corrida é ou se não o esporte mais praticado de todos os tempos.
+              Podendo ser praticado em locais abertos próximo a natureza ou em
+              grandes cidades. Veja os benefícios deste esporte.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/surf.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">SURF</p>
+            <p class="mainCategoryCardDescription">
+              O surf é um esporte que exige mutio esforço físico e equilíbrio.
+              Ajuda a fortalecer e emagrecer, tonifica as pernas e traz saúde.
+              Veja mais aqui.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/trilha.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">TRILHA</p>
+            <p class="mainCategoryCardDescription">
+              Para você que é aventureiro e não gosta de ficar trancado em uma
+              academia. Veja os principais benefícios de se fazer trilhas.
+            </p>
+          </div>
+          <div class="categoryCard">
+            <img src="img/tenis.jpg" alt="mainCardImg" class="mainCardImg" />
+            <p class="mainCategoryCardTitle">TÊNIS</p>
+            <p class="mainCategoryCardDescription">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+              saepe obcaecati amet a magnam unde, incidunt sunt quaerat nihil
+              odit nostrum, voluptatibus velit illo, ea aliquid iusto
+              dignissimos rerum est.
+            </p>
+          </div>
+        </div>
+        <div class="sidebarContent">
+          <p>CATEGORIAS EXTRAS</p>
+          <div class="sidebarCard">
+            <img
+              src="img/bicicletas.jpg"
+              alt="sidebarCardImg"
+              class="sidebarCardImg"
+            />
+            <p class="sidebarCardTitle">BICICLETAS</p>
+          </div>
+          <div class="sidebarCard">
+            <img
+              src="img/esportesNaNeve.jpg"
+              alt="sidebarCardImg"
+              class="sidebarCardImg"
+            />
+            <p class="sidebarCardTitle">ESPORTES DE NEVE</p>
+          </div>
+          <div class="sidebarCard">
+            <img
+              src="img/futebolAmericano.jpg"
+              alt="sidebarCardImg"
+              class="sidebarCardImg"
+            />
+            <p class="sidebarCardTitle">FUTEBOL AMERICANO</p>
+          </div>
+          <div class="sidebarCard">
+            <img
+              src="img/skate.jpg"
+              alt="sidebarCardImg"
+              class="sidebarCardImg"
+            />
+            <p class="sidebarCardTitle">SKATE</p>
+          </div>
+          <div class="sidebarCard">
+            <img
+              src="img/yoga.jpg"
+              alt="sidebarCardImg"
+              class="sidebarCardImg"
+            />
+            <p class="sidebarCardTitle">YOGA</p>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <img
+          src="img/logo-onebitcode.svg"
+          alt="logo-footer"
+          class="logoFooter"
+        />
+        <a href="#backToTop" class="footerAnchor">VOLTAR PARA O TOPO</a>
+      </footer>
+    </div>
+  </body>
+</html>
