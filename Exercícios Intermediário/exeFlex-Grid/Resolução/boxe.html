@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport Boxer</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        background-color: #292929;
+        width: 100%;
+        min-height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 8px;
+      }
+      .logoHeader {
+        width: 180px;
+      }
+      .navMenu {
+        color: white;
+        text-decoration: none;
+        padding: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+        transition: 0.3s;
+      }
+      .navMenu:hover {
+        border-bottom: 1px solid white;
+      }
+      .imgSection {
+        width: 100%;
+        height: 300px;
+      }
+      .asideCardImg {
+        width: 100%;
+      }
+      .gridContainer {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: "sectionBar asideBar";
+        flex: 1 0 auto;
+        padding: 20px;
+        gap: 20px;
+      }
+      .sectionBar {
+        grid-area: sectionBar;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: justify;
+      }
+      .asideContainer {
+        grid-area: asideBar;
+        padding: 30px;
+        background-color: #383838;
+        color: white;
+        text-align: center;
+        transition: 0.4s;
+      }
+
+      .categoryAside {
+        cursor: pointer;
+        padding-bottom: 20px;
+        margin: 10px;
+      }
+      .categoryAside:hover {
+        border-radius: 0px 0px 10px 10px;
+        border: 1px solid white;
+      }
+
+      .asideTitle {
+        padding-bottom: 20px;
+        text-shadow: 1px 1px 1px rgb(14, 13, 13);
+      }
+      .footer {
+        background-color: #292929;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      .logofooter {
+        width: 180px;
+      }
+      .footerAnchor {
+        color: white;
+        text-decoration: none;
+      }
+      @media (max-width: 730px) {
+        .header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .gridContainer {
+          grid-template-areas: "sectionBar" "asideBar";
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .imgSection {
+          border-radius: 10px;
+        }
+        .footer {
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      @media (min-width: 1600px) and (max-width: 2560px) {
+        .logoHeader {
+          width: 300px;
+        }
+        .navMenu {
+          font-size: 40px;
+        }
+        .sectionBar p {
+          font-size: 50px;
+        }
+        .imgSection {
+          height: 500px;
+        }
+        .asideTitle {
+          font-size: 40px;
+        }
+        .categoryAside p {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header" id="header">
+        <a href="index.html"
+          ><img
+            src="img/logo-onebitcode.svg"
+            alt="logoHeader"
+            class="logoHeader"
+          />
+        </a>
+        <div>
+          <nav class="navHeader">
+            <a href="#" class="navMenu">Login</a>
+            <a href="#" class="navMenu">Registro</a>
+            <a href="#" class="navMenu">FAQ</a>
+          </nav>
+        </div>
+      </header>
+      <section class="gridContainer">
+        <div class="sectionBar">
+          <img src="img/boxe.jpg" alt="boxeImage" class="imgSection" />
+          <p>
+            O boxe é um esporte que treina equilíbrio e força, tendo aspecto de
+            ser um esporte com bastante esquiva e socos em sequência. É um dos
+            esportes mais vistos em lutas e que possui diversas categorías de
+            pesos. Além disso, é um esporte que visa bastante o condicionamento
+            físico e resistência de seus praticantes, não somente a física mas a
+            mental também, pois, geralmente se têm diversos rounds. Alguns dos
+            seus campeões são conhecidos internacionalmente. Lorem ipsum dolor
+            sit, amet consectetur adipisicing elit. Impedit possimus ut veniam
+            reiciendis ad quo incidunt est accusamus, molestias, rerum placeat
+            nulla laboriosam repudiandae, corporis deserunt debitis maxime
+            exercitationem earum?
+          </p>
+          <img src="img/boxe3.jpg" alt="boxeImage" class="imgSection" />
+          <p>
+            O boxe é um esporte que treina equilíbrio e força, tendo aspecto de
+            ser um esporte com bastante esquiva e socos em sequência. É um dos
+            esportes mais vistos em lutas e que possui diversas categorías de
+            pesos. Além disso, é um esporte que visa bastante o condicionamento
+            físico e resistência de seus praticantes, não somente a física mas a
+            mental também, pois, geralmente se têm diversos rounds. Alguns dos
+            seus campeões são conhecidos internacionalmente.
+          </p>
+          <img src="img/boxe2.jpg" alt="boxeImage" class="imgSection" />
+          <p>
+            O boxe é um esporte que treina equilíbrio e força, tendo aspecto de
+            ser um esporte com bastante esquiva e socos em sequência. É um dos
+            esportes mais vistos em lutas e que possui diversas categorías de
+            pesos. Além disso, é um esporte que visa bastante o condicionamento
+            físico e resistência de seus praticantes, não somente a física mas a
+            mental também, pois, geralmente se têm diversos rounds. Alguns dos
+            seus campeões são conhecidos internacionalmente. Lorem ipsum, dolor
+            sit amet consectetur adipisicing elit. Modi eligendi sed culpa odio
+            molestias dignissimos, quis facere omnis explicabo, excepturi id
+            nihil eaque. Temporibus, explicabo. Deserunt quos quasi laudantium
+            explicabo.
+          </p>
+          <img src="img/boxe4.jpg" alt="boxeImage" class="imgSection" />
+          <p>
+            O boxe é um esporte que treina equilíbrio e força, tendo aspecto de
+            ser um esporte com bastante esquiva e socos em sequência. É um dos
+            esportes mais vistos em lutas e que possui diversas categorías de
+            pesos. Além disso, é um esporte que visa bastante o condicionamento
+            físico e resistência de seus praticantes, não somente a física mas a
+            mental também, pois, geralmente se têm diversos rounds. Alguns dos
+            seus campeões são conhecidos internacionalmente. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Suscipit sit sequi dolore
+            perferendis in minima excepturi asperiores, possimus numquam unde
+            optio delectus eum quod. Delectus animi iusto soluta ducimus
+            tenetur.
+          </p>
+        </div>
+        <aside class="asideContainer">
+          <h2 class="asideTitle">CATEROGIAS EXTRAS</h2>
+          <div class="categoryAside">
+            <a href=""
+              ><img src="img/bicicletas.jpg" alt="bike" class="asideCardImg"
+            /></a>
+            <p>BICICLETAS</p>
+          </div>
+          <div class="categoryAside">
+            <a href=""
+              ><img
+                src="img/esportesNaNeve.jpg"
+                alt="bike"
+                class="asideCardImg"
+            /></a>
+            <p>ESPORTES DE NEVE</p>
+          </div>
+          <div class="categoryAside">
+            <img
+              src="img/futebolAmericano.jpg"
+              alt="bike"
+              class="asideCardImg"
+            />
+            <p>FUTEBOL AMERICANO</p>
+          </div>
+          <div class="categoryAside">
+            <a href=""
+              ><img src="img/skate.jpg" alt="bike" class="asideCardImg"
+            /></a>
+            <p>SKATE</p>
+          </div>
+          <div class="categoryAside">
+            <a href=""
+              ><img src="img/yoga.jpg" alt="bike" class="asideCardImg"
+            /></a>
+            <p>YOGA</p>
+          </div>
+          <div class="categoryAside">
+            <a href=""
+              ><img src="img/surf.jpg" alt="bike" class="asideCardImg"
+            /></a>
+            <p>SURF</p>
+          </div>
+          <div class="categoryAside">
+            <a href=""
+              ><img src="img/basquete.jpg" alt="bike" class="asideCardImg"
+            /></a>
+            <p>BASQUETE</p>
+          </div>
+        </aside>
+      </section>
+      <footer class="footer">
+        <img
+          src="img/logo-onebitcode.svg"
+          alt="logoFooter"
+          class="logofooter"
+        />
+        <div>
+          <a href="#header" class="footerAnchor">
+            <p>VOLTAR AO TOPO</p>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
