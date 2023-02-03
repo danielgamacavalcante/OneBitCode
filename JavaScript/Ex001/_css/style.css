@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: dimgray;
+  color: white;
+}
+.gridSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.sectionForm {
+  padding: 20px;
+  margin: 30px;
+  border: 4px solid rgba(0, 0, 0, 0.418);
+  border-radius: 10px;
+  background-color: #8880fe;
+}
+.formCandidatura {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 5px;
+}
+#btnEnviar {
+  margin-top: 20px;
+}

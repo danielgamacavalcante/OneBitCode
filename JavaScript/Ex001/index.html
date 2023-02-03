@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="_css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>HEADER</h1></header>
+      <section class="gridSection">
+        <div class="sectionForm">
+          <form class="formCandidatura" action="" autocomplete="on">
+            Primeiro Nome:
+            <input
+              type="text"
+              name="fistName"
+              id="fistName "
+              placeholder="Ex: Lucas"
+              autofocus
+              required
+              size="40"
+            />
+            Sobrenome:
+            <input
+              type="text"
+              name="fistName"
+              id="fistName"
+              placeholder="Ex: Pinheiro"
+              size="40"
+            />
+            <label for="estudos">Campo de Estudo: </label>
+            <input list="estudos" />
+            <datalist id="estudos">
+              <option value="Web FullStack"></option>
+              <option value="Web Front-end"></option>
+              <option value="Web Back-end"></option>
+              <option value="Mobile"></option>
+              <option value="Secury TI"></option>
+              <option value="Tecnology Information"></option>
+            </datalist>
+            Data de Nascimento:
+            <input type="date" name="dataNascimento" id="dataNascimento" />
+            <input id="btnEnviar" type="button" value="Enviar" />
+          </form>
+        </div>
+        <img src="_imgs/mobile.svg" alt="mobileImg" />
+      </section>
+      <footer><h1>FOOTER</h1></footer>
+    </div>
+  </body>
+</html>
