@@ -9,15 +9,16 @@
   </head>
   <body>
     <div class="container">
-      <header><h1>HEADER</h1></header>
+      <header class="header"><h1>HEADER</h1></header>
       <section class="gridSection">
         <div class="sectionForm">
           <form class="formCandidatura" action="" autocomplete="on">
             Primeiro Nome:
             <input
+              class="form"
               type="text"
               name="fistName"
-              id="fistName "
+              id="firstName"
               placeholder="Ex: Lucas"
               autofocus
               required
@@ -25,14 +26,15 @@
             />
             Sobrenome:
             <input
+              class="form"
               type="text"
-              name="fistName"
-              id="fistName"
+              name="lastName"
+              id="lastName"
               placeholder="Ex: Pinheiro"
               size="40"
             />
-            <label for="estudos">Campo de Estudo: </label>
-            <input list="estudos" />
+            <label class="form" for="estudos">Campo de Estudo: </label>
+            <input class="form" list="estudos" id="listStudy" />
             <datalist id="estudos">
               <option value="Web FullStack"></option>
               <option value="Web Front-end"></option>
@@ -42,13 +44,56 @@
               <option value="Tecnology Information"></option>
             </datalist>
             Data de Nascimento:
-            <input type="date" name="dataNascimento" id="dataNascimento" />
-            <input id="btnEnviar" type="button" value="Enviar" />
+            <input
+              class="form"
+              type="date"
+              name="dataNascimento"
+              id="dataNascimento"
+            />
+            <p class="checkSexy form">
+              Sexo:
+              <input type="radio" name="check" id="checkm" checked />
+              <label for="checkm">Masculino</label>
+              <input type="radio" name="check" id="checkf" />
+              <label for="checkf">Feminino</label>
+            </p>
+            <input
+              class="form"
+              id="btnEnviar"
+              type="button"
+              value="Enviar"
+              onclick="enviar()"
+            />
           </form>
         </div>
-        <img src="_imgs/mobile.svg" alt="mobileImg" />
+        <div class="imgContainer">
+          <img src="_imgs/mobile.svg" alt="mobileImg" class="img" />
+        </div>
       </section>
-      <footer><h1>FOOTER</h1></footer>
+      <footer class="footer"><h1>FOOTER</h1></footer>
     </div>
+    <script>
+      function enviar() {
+        let firstName = document.querySelector("#firstName").value;
+        let lastName = document.querySelector("#lastName").value;
+        let date = document.querySelector("#dataNascimento").value;
+        let listStudy = document.querySelector("#listStudy").value;
+        let sexo = document.getElementsByName("check");
+        let genero;
+
+        if (sexo[0].checked) {
+          genero = "Masculino";
+        } else if (sexo[1].checked) {
+          genero = "Feminino";
+        }
+        alert(`
+          Nome: ${firstName} \n
+          Sobrenome: ${lastName}\n
+          Data Nascimento: ${date}\n
+          Campo de Estudo: ${listStudy}\n
+          Sexo: ${genero}
+        `);
+      }
+    </script>
   </body>
 </html>
