@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Grid</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      div {
+        display: flex;
+        background-color: aqua;
+        width: 300px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      Section 1
+      <section id="sec1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </section>
+      <br />
+      justify-content: space-between;
+      <section id="sec2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </section>
+      <br />
+      justify-content: space-around;
+      <section id="sec3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </section>
+      <br />
+      align-items: baseline
+      <section id="sec4">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div1">3</div>
+        <div class="div2">4</div>
+      </section>
+      <br />
+      flex-grow nos Filhos(Div)
+      <section id="sec5">
+        <div class="div3" id="div1Ex5">1</div>
+        <div class="div3" id="div2Ex5">2</div>
+        <div class="div3" id="div3Ex5">3</div>
+        <div class="div3" id="div4Ex5">4</div>
+      </section>
+    </section>
+  </body>
+</html>
