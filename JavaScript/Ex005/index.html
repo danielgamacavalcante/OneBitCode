@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Cadastro de Desenvolvedor</h1>
+    <hr />
+    <section>
+      <form id="form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" />
+        <br /><br />
+        <label for="timeService">Tempo de Serviço:</label>
+        <br />
+        <select name="timeService" id="timeService">
+          <option selected disabled>Selecione Tempo de Serviço</option>
+          <option value="1 mês a 1 ano">1 mês a 1 ano</option>
+          <option value="1 ano a 2 anos">1 ano a 2 anos</option>
+          <option value="2 anos a 3 anos">2 anos a 3 anos</option>
+          <option value="3 anos ou mais">3 anos ou mais</option></select
+        ><br /><br />
+        <label>Tecnologia Aprendida:</label><br />
+        <button type="button" id="btnAddTecnology">Adicionar Tecnologia</button
+        ><br />
+        <ul id="ul"></ul>
+        <hr />
+      </form>
+      <br />
+      <button type="submit" id="btnRegister">Cadastrar</button>
+    </section>
+  </body>
+</html>
