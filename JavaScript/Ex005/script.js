@@ -14,10 +14,10 @@ function createInput(id, value, name, type = "text", placeholder = "") {
   input.placeholder = placeholder;
   return input;
 }
-const form = document.getElementById("#form");
+const form = document.getElementById("form");
 const ul = document.querySelector("#ul");
 let cont = 0;
-developer = [];
+const developer = [];
 
 const btnAddDeveloper = document.querySelector("#btnAddTecnology");
 btnAddDeveloper.addEventListener("click", function (ev) {
@@ -33,7 +33,7 @@ btnAddDeveloper.addEventListener("click", function (ev) {
     newRowLi.className = "inputRow";
 
     const techNameLabel = createLabel("Nome:", "techName-" + rowIndex);
-    const tecNameInput = createInput("techName-" + rowIndex, null, "techName");
+    const techNameInput = createInput("techName-" + rowIndex, null, "techName");
 
     const expLabel = createLabel("Experiência: ");
     let id1 = "expRadio-" + rowIndex + ".1";
@@ -72,7 +72,7 @@ btnAddDeveloper.addEventListener("click", function (ev) {
 
     newRowLi.append(
       techNameLabel,
-      tecNameInput,
+      techNameInput,
       expLabel,
       expRadio1,
       expLabel1,
@@ -88,14 +88,41 @@ btnAddDeveloper.addEventListener("click", function (ev) {
     alert("[ERRO] Preencha os campos Nome e Tempo de Serviço");
   }
 });
-
-const btnRegister = document.querySelector("#btnRegister");
-btnRegister.addEventListener("click", function (ev) {
+const btn = document.querySelector("#btnRegister");
+btn.addEventListener("click", function (ev) {
+  console.log("Entrou");
   ev.preventDefault();
   const nameDeveloper = document.querySelector("#name").value;
   const timeWorking = document.querySelector("#timeService").value;
+  const inputRowLi = document.querySelectorAll(".inputRow");
+  let arrayListTecnology = [];
   if ((nameDeveloper && timeWorking) != "") {
-    console.log("Entrou");
-    console.log(nameDeveloper, timeWorking);
+    const confirme = confirm("Tem certeza que deseja cadastrar?");
+
+    if (confirme) {
+      inputRowLi.forEach(function (row) {
+        const techName = document.querySelector(
+          "#" + row.id + " input[name='techName'"
+        ).value;
+        const techExp = document.querySelector(
+          "#" + row.id + ' input[type="radio"]:checked'
+        ).value;
+        arrayListTecnology.push({ name: techName.value, epx: techExp.value });
+      });
+      const newDev = {
+        fullname: nameDeveloper,
+        timeWorking: timeWorking,
+        arrayListTecnology,
+      };
+      developer.push[newDev];
+      alert("Dev cadastrado com sucesso!");
+
+      nameDeveloper.value = "";
+      nameDeveloper.innerText = "";
+      inputRowLi.forEach(function (row) {
+        row.remove();
+      });
+      console.log(developer);
+    }
   }
 });
