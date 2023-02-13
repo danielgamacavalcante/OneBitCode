@@ -88,41 +88,41 @@ btnAddDeveloper.addEventListener("click", function (ev) {
     alert("[ERRO] Preencha os campos Nome e Tempo de Serviço");
   }
 });
-const btn = document.querySelector("#btnRegister");
-btn.addEventListener("click", function (ev) {
-  console.log("Entrou");
-  ev.preventDefault();
-  const nameDeveloper = document.querySelector("#name").value;
-  const timeWorking = document.querySelector("#timeService").value;
-  const inputRowLi = document.querySelectorAll(".inputRow");
-  let arrayListTecnology = [];
-  if ((nameDeveloper && timeWorking) != "") {
-    const confirme = confirm("Tem certeza que deseja cadastrar?");
+// const btn = document.querySelector("#btnRegister");
+// btn.addEventListener("click", function (ev) {
+//   console.log("Entrou");
+//   ev.preventDefault();
+//   const nameDeveloper =
+//   const timeWorking = document.querySelector("#timeService").value;
+//   const inputRowLi = document.querySelectorAll(".inputRow");
+//   let arrayListTecnology = [];
+//   if ((nameDeveloper && timeWorking) != "") {
+//     const confirme = confirm("Tem certeza que deseja cadastrar?");
 
-    if (confirme) {
-      inputRowLi.forEach(function (row) {
-        const techName = document.querySelector(
-          "#" + row.id + " input[name='techName'"
-        ).value;
-        const techExp = document.querySelector(
-          "#" + row.id + ' input[type="radio"]:checked'
-        ).value;
-        arrayListTecnology.push({ name: techName.value, epx: techExp.value });
-      });
-      const newDev = {
-        fullname: nameDeveloper,
-        timeWorking: timeWorking,
-        arrayListTecnology,
-      };
-      developer.push[newDev];
-      alert("Dev cadastrado com sucesso!");
+//     if (confirme) {
+//       inputRowLi.forEach(function (row) {
+//         const techName = document.querySelector(
+//           "#" + row.id + " input[name='techName'"
+//         ).value;
+//         const techExp = document.querySelector(
+//           "#" + row.id + ' input[type="radio"]:checked'
+//         ).value;
+//         arrayListTecnology.push({ name: techName.value, epx: techExp.value });
+//       });
+//       const newDev = {
+//         fullname: nameDeveloper,
+//         timeWorking: timeWorking,
+//         arrayListTecnology,
+//       };
+//       developer.push[newDev];
+//       alert("Dev cadastrado com sucesso!");
 
-      nameDeveloper.value = "";
-      nameDeveloper.innerText = "";
-      inputRowLi.forEach(function (row) {
-        row.remove();
-      });
-      console.log(developer);
-    }
-  }
-});
+//       nameDeveloper.value = "";
+//       nameDeveloper.innerText = "";
+//       inputRowLi.forEach(function (row) {
+//         row.remove();
+//       });
+//       console.log(developer);
+//     }
+//   }
+// });
