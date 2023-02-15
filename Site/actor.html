@@ -9,31 +9,78 @@
     <title>Personagem</title>
     <style>
       #mainSection {
-        height: 100vh;
+        height: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
       }
+      .divForm {
+        height: 50%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px black;
+      }
       #formActor {
-        width: 400px;
-        background-color: rgb(216, 219, 219);
+        height: auto;
+        flex-basis: 60%;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(37, 201, 201);
         margin: 20px;
         padding: 20px;
-        box-shadow: 0px 0px 10px black;
+        box-shadow: 0px 0px 5px black;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-items: center;
         align-items: center;
       }
       #ulForm {
         list-style: none;
+        display: flex;
+        flex-direction: column;
       }
+      /* #ulForm > textarea {
+        display: flex;
+        flex-wrap: wrap;
+      } */
       #ulForm li {
+        display: grid;
         margin: 10px;
       }
+      .labelTxt {
+        font-weight: bold;
+      }
+      #classWarrior {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(255, 0, 0);
+      }
+      #classArch {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(80, 160, 86);
+      }
+      #classMage {
+        font-size: 18px;
+        font-weight: bold;
+        color: blue;
+      }
+
+      @media (max-width: 495px) {
+        #formActor {
+          height: auto;
+          flex-wrap: wrap;
+        }
+        .header {
+          display: flex;
+          flex-direction: column;
+        }
+      } ;
     </style>
   </head>
   <body>
@@ -53,7 +100,7 @@
         </div>
       </header>
 
-      <div>
+      <div class="divForm">
         <form id="formActor">
           <ul id="ulForm">
             <li>
@@ -131,9 +178,19 @@
         if (ev.target.value == "Guerreiro") {
           const liAtributs = document.createElement("li");
           liAtributs.id = "row-atributs";
+          const pNameClass = document.createElement("p");
+          pNameClass.innerText = "Guerreiro";
+          pNameClass.id = "classWarrior";
           const label = document.createElement("label");
+          label.className = "labelTxt";
           label.innerText =
-            "Guerreiro:\nAtributos: Vit: 7; Agi: 4, Atk(Espada:2), alt: 1m, Stamina: 3";
+            "\nAtributos: Vit: 7;" +
+            "\n\n  Agilidade: 4" +
+            "\n\n  Ataque(Espada:2)" +
+            "\n\n  Altura: 1m" +
+            "\n\n  Stamina: 3";
+
+          liAtributs.appendChild(pNameClass);
           liAtributs.appendChild(label);
           liClass.appendChild(liAtributs);
 
@@ -144,9 +201,14 @@
         if (ev.target.value == "Arqueiro") {
           const liAtributs = document.createElement("li");
           liAtributs.id = "row-atributs";
+          const pNameClass = document.createElement("p");
+          pNameClass.innerText = "Arqueiro";
+          pNameClass.id = "classArch";
           const label = document.createElement("label");
+          label.className = "labelTxt";
           label.innerText =
-            "Arqueiro:\nAtributos: Vit 4; Agi: 7, Atk(Arco: 3), alt: 1m, Stamina: 3";
+            "\nAtributos: Vitalidade: 4\n\n Agilidade: 7\n\n Ataque(Arco: 3)\n\n altura: 1m\n\n Stamina: 3";
+          liAtributs.appendChild(pNameClass);
           liAtributs.appendChild(label);
           liClass.appendChild(liAtributs);
 
@@ -157,9 +219,14 @@
         if (ev.target.value == "Mago") {
           const liAtributs = document.createElement("li");
           liAtributs.id = "row-atributs";
+          const pNameClass = document.createElement("p");
+          pNameClass.innerText = "Mago";
+          pNameClass.id = "classMage";
           const label = document.createElement("label");
+          label.className = "labelTxt";
           label.innerText =
-            "Mago:\nAtributos: Vit 3; Agi: 3, Atk(cajado: 4), alt: 1m, Stamina: 4";
+            "\nAtributos: \n\nVitalidade: 3;\n\n Agilidade: 3 \n\n Ataque(cajado: 4)\n\n altura: 1m \n\n Stamina: 4";
+          liAtributs.appendChild(pNameClass);
           liAtributs.appendChild(label);
           liClass.appendChild(liAtributs);
 
