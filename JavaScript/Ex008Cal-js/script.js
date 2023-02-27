@@ -25,12 +25,15 @@ const allowedKeys = [
   " ",
 ];
 document.querySelectorAll(".charKey").forEach(function (charKeyBtn) {
-  input.addEventListener("click", function () {
+  charKeyBtn.addEventListener("click", function () {
     const value = charKeyBtn.dataset.value;
     input.value += value;
+    input.focus();
   });
 });
-
+document.querySelector("#clear").addEventListener("click", function () {
+  input.value = " ";
+});
 input.addEventListener("keydown", function (ev) {
   ev.preventDefault();
   if (allowedKeys.includes(ev.key)) {
@@ -38,13 +41,18 @@ input.addEventListener("keydown", function (ev) {
     return;
   }
   if (ev.key === "Backspace") {
-    input.value = input.value.slice(0, -1);
+    if (input.value.lastIndexOf(" ") == input.value.length - 1) {
+      input.value = input.value.slice(0, -3);
+    } else {
+      input.value = input.value.slice(0, -1);
+    }
   }
   if (ev.key === "Enter") {
     calculator();
   }
 });
-
+document.getElementById("equal").addEventListener("click", calculator);
 function calculator() {
-  console.log("Nice");
+  const result = eval(input.value);
+  input.value = result;
 }
