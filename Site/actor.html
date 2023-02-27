@@ -161,7 +161,7 @@
                 <option value="Mago">Mago</option>
               </select>
             </li>
-            <li>
+            <li id="liRaca">
               <label for="raca">Raça:</label>
               <select name="raca" id="raca">
                 <option selected disabled>Escolha</option>
@@ -223,10 +223,7 @@
           const label = document.createElement("label");
           label.className = "labelTxt";
           label.innerText =
-            "\nAtributos: Vit: 7;" +
-            "\n\n  Agilidade: 4" +
-            "\n\n  Altura: 1m" +
-            "\n\n  Stamina: 3";
+            "\nAtributos:\n\nVit: 7" + "  Agilidade: 4" + "  Stamina: 3";
 
           console.log(document.body.clientHeight);
           if (document.body.clientHeight <= 970) {
@@ -254,7 +251,7 @@
           const label = document.createElement("label");
           label.className = "labelTxt";
           label.innerText =
-            "\nAtributos: Vitalidade: 4\n\n Agilidade: 7\n\n altura: 1m\n\n Stamina: 3";
+            "\nAtributos:\n\nVitalidade: 4  Agilidade: 7  Stamina: 3";
           if (document.body.clientHeight <= 970) {
             const divOfForm = document.getElementById("divForm");
             divOfForm.style.height = "170vh";
@@ -279,7 +276,7 @@
           const label = document.createElement("label");
           label.className = "labelTxt";
           label.innerText =
-            "\nAtributos: \n\nVitalidade: 3;\n\n Agilidade: 3 \n\n altura: 1m \n\n Stamina: 4";
+            "\nAtributos: \nVitalidade: 3 Agilidade: 3 Stamina: 4";
           if (document.body.clientHeight <= 970) {
             const divOfForm = document.getElementById("divForm");
             divOfForm.style.height = "170vh";
@@ -294,6 +291,98 @@
           ev.target.value = null;
 
           estado = true;
+        }
+      });
+      const raca = document.getElementById("raca");
+      const liraca = document.querySelector("#liRaca");
+      let estadoRaca = false;
+      raca.addEventListener("click", function (ev) {
+        if (estadoRaca) {
+          const rowRemove = document.querySelector("#row-atributsRace");
+          liraca.removeChild(rowRemove);
+          estadoRaca = false;
+        }
+
+        if (ev.target.value == "Elfo") {
+          const liAtributs = document.createElement("li");
+          liAtributs.id = "row-atributsRace";
+          const pNameRaca = document.createElement("p");
+          pNameRaca.innerText = "Elfo";
+          pNameRaca.id = "RaceElfo";
+          const label = document.createElement("label");
+          label.className = "labelTxt";
+          label.innerText = "\nAltura: 1.5";
+
+          console.log(document.body.clientHeight);
+          if (document.body.clientHeight <= 970) {
+            const divOfForm = document.getElementById("divForm");
+            divOfForm.style.height = "170vh";
+            const form = document.getElementById("formActor");
+            form.style.height = "130vh";
+            ulForm.style.height = "120vh";
+          }
+
+          liAtributs.appendChild(pNameRaca);
+          liAtributs.appendChild(label);
+          liraca.appendChild(liAtributs);
+
+          ev.target.value = null;
+
+          estadoRaca = true;
+        }
+        if (ev.target.value == "Anao") {
+          const liAtributs = document.createElement("li");
+          liAtributs.id = "row-atributsRace";
+          const pNameRaca = document.createElement("p");
+          pNameRaca.innerText = "Anão";
+          pNameRaca.id = "RaceElfo";
+          const label = document.createElement("label");
+          label.className = "labelTxt";
+          label.innerText = "\nAltura: 1";
+
+          console.log(document.body.clientHeight);
+          if (document.body.clientHeight <= 970) {
+            const divOfForm = document.getElementById("divForm");
+            divOfForm.style.height = "170vh";
+            const form = document.getElementById("formActor");
+            form.style.height = "130vh";
+            ulForm.style.height = "120vh";
+          }
+
+          liAtributs.appendChild(pNameRaca);
+          liAtributs.appendChild(label);
+          liraca.appendChild(liAtributs);
+
+          ev.target.value = null;
+
+          estadoRaca = true;
+        }
+        if (ev.target.value == "Humano") {
+          const liAtributs = document.createElement("li");
+          liAtributs.id = "row-atributsRace";
+          const pNameRaca = document.createElement("p");
+          pNameRaca.innerText = "Humano";
+          pNameRaca.id = "RaceElfo";
+          const label = document.createElement("label");
+          label.className = "labelTxt";
+          label.innerText = "\nAltura: 2";
+
+          console.log(document.body.clientHeight);
+          if (document.body.clientHeight <= 970) {
+            const divOfForm = document.getElementById("divForm");
+            divOfForm.style.height = "170vh";
+            const form = document.getElementById("formActor");
+            form.style.height = "130vh";
+            ulForm.style.height = "120vh";
+          }
+
+          liAtributs.appendChild(pNameRaca);
+          liAtributs.appendChild(label);
+          liraca.appendChild(liAtributs);
+
+          ev.target.value = null;
+
+          estadoRaca = true;
         }
       });
     </script>

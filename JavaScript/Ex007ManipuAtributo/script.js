@@ -7,8 +7,13 @@ document
   });
 
 document.getElementById("btnChangeType").addEventListener("click", function () {
-  input.type = input.type !== "text" ? "text" : "radio";
+  // input.type = input.type !== "text" ? "text" : "radio";
   // input.setAttribute("type", "radio");
+  // if (input.type == "text") {
+  //   input.type = "radio";
+  // } else {
+  //   input.type = "text";
+  // }
 });
 document
   .getElementById("btnPlaceholder")

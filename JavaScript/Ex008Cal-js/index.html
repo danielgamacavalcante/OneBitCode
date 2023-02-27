@@ -9,6 +9,38 @@
     <title>calculadora</title>
   </head>
   <body>
-    <main data-theme="light"></main>
+    <main data-theme="dark">
+      <header class="flex align-center justify-betteween">
+        <h1>Calc.js</h1>
+        <button id="themeSwitcher">Switcher Theme Dark/Light</button>
+      </header>
+      <input type="text" id="input" />
+      <div id="keys">
+        <button id="clear">C</button>
+        <button class="charKey" data-valeu=" ( ">(</button>
+        <button class="charKey" data-valeu=" ) ">)</button>
+        <button class="charKey" data-valeu="/">/</button>
+        <button class="charKey" data-valeu="7">7</button>
+        <button class="charKey" data-valeu="8">8</button>
+        <button class="charKey" data-valeu="9">9</button>
+        <button class="charKey" data-valeu=" * ">*</button>
+        <button class="charKey" data-valeu="4">4</button>
+        <button class="charKey" data-valeu="5">5</button>
+        <button class="charKey" data-valeu="6">6</button>
+        <button class="charKey" data-valeu=" - ">-</button>
+        <button class="charKey" data-valeu="1">1</button>
+        <button class="charKey" data-valeu="2">2</button>
+        <button class="charKey" data-valeu="3">3</button>
+        <button class="charKey" data-valeu=" + ">+</button>
+        <button class="charKey" data-valeu="0">0</button>
+        <button class="charKey" data-valeu=".">.</button>
+        <button class="charKey" data-valeu=" % ">mod(%)</button>
+        <button data-valeu="equal">=</button>
+      </div>
+      <section class="flex align-center justify-between">
+        <button id="copyToClipboard">copy</button>
+        <input type="text" id="result" disabled />
+      </section>
+    </main>
   </body>
 </html>
