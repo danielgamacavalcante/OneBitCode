@@ -70,17 +70,54 @@
         font-weight: bold;
         color: blue;
       }
-
-      @media (max-width: 495px) {
-        #formActor {
-          height: auto;
-          flex-wrap: wrap;
-        }
+      #history {
+        resize: none;
+      }
+      @media (max-width: 490px) {
         .header {
           display: flex;
           flex-direction: column;
         }
-      } ;
+        #formActor {
+        }
+      }
+      @media (max-width: 730px) {
+        .header {
+          display: flex;
+          flex-direction: column;
+        }
+        #formActor {
+          flex-basis: 80%;
+        }
+      }
+      @media (max-width: 790px) {
+        .header {
+          display: flex;
+          flex-direction: column;
+        }
+        .divForm {
+          width: 95vw;
+        }
+      }
+      @media (max-width: 970px) {
+        .header {
+          display: flex;
+          flex-direction: column;
+        }
+        .divForm {
+          height: 130vh;
+          margin: 10px;
+        }
+        #formActor {
+          height: 100vh;
+        }
+        #ulForm {
+          height: 80vh;
+        }
+        #history {
+          height: 40vh;
+        }
+      }
     </style>
   </head>
   <body>
@@ -96,16 +133,18 @@
             <a href="index.html" target="_self">Home</a>
             <a href="register.html" target="_self">Cadastre-se</a>
             <a href="login.html" target="_self">Entre</a>
+            <a href="game.html" target="_self">Jogo</a>
           </nav>
         </div>
       </header>
 
-      <div class="divForm">
+      <div class="divForm" id="divForm">
         <form id="formActor">
           <ul id="ulForm">
             <li>
               <label for="nameActor">Nome:</label>
               <input
+                class="flex"
                 type="text"
                 name="nameActor"
                 id="nameActor"
@@ -115,7 +154,7 @@
             </li>
             <li id="liClass">
               <label>Classe:</label>
-              <select name="classes" id="classes">
+              <select name="classes" id="classes" class="flex">
                 <option selected disabled>Escolha</option>
                 <option value="Guerreiro">Guerreiro</option>
                 <option value="Arqueiro">Arqueiro</option>
@@ -137,13 +176,13 @@
               <textarea
                 name="history"
                 id="history"
-                cols="30"
-                rows="10"
                 maxlength="300"
+                cols="50"
+                rows="10"
               ></textarea>
             </li>
+            <li><button type="button">Cadastrar</button></li>
           </ul>
-          <button type="button">Cadastrar</button>
         </form>
       </div>
 
@@ -186,9 +225,17 @@
           label.innerText =
             "\nAtributos: Vit: 7;" +
             "\n\n  Agilidade: 4" +
-            "\n\n  Ataque(Espada:2)" +
             "\n\n  Altura: 1m" +
             "\n\n  Stamina: 3";
+
+          console.log(document.body.clientHeight);
+          if (document.body.clientHeight <= 970) {
+            const divOfForm = document.getElementById("divForm");
+            divOfForm.style.height = "170vh";
+            const form = document.getElementById("formActor");
+            form.style.height = "130vh";
+            ulForm.style.height = "120vh";
+          }
 
           liAtributs.appendChild(pNameClass);
           liAtributs.appendChild(label);
@@ -207,7 +254,14 @@
           const label = document.createElement("label");
           label.className = "labelTxt";
           label.innerText =
-            "\nAtributos: Vitalidade: 4\n\n Agilidade: 7\n\n Ataque(Arco: 3)\n\n altura: 1m\n\n Stamina: 3";
+            "\nAtributos: Vitalidade: 4\n\n Agilidade: 7\n\n altura: 1m\n\n Stamina: 3";
+          if (document.body.clientHeight <= 970) {
+            const divOfForm = document.getElementById("divForm");
+            divOfForm.style.height = "170vh";
+            const form = document.getElementById("formActor");
+            form.style.height = "130vh";
+            ulForm.style.height = "120vh";
+          }
           liAtributs.appendChild(pNameClass);
           liAtributs.appendChild(label);
           liClass.appendChild(liAtributs);
@@ -225,7 +279,14 @@
           const label = document.createElement("label");
           label.className = "labelTxt";
           label.innerText =
-            "\nAtributos: \n\nVitalidade: 3;\n\n Agilidade: 3 \n\n Ataque(cajado: 4)\n\n altura: 1m \n\n Stamina: 4";
+            "\nAtributos: \n\nVitalidade: 3;\n\n Agilidade: 3 \n\n altura: 1m \n\n Stamina: 4";
+          if (document.body.clientHeight <= 970) {
+            const divOfForm = document.getElementById("divForm");
+            divOfForm.style.height = "170vh";
+            const form = document.getElementById("formActor");
+            form.style.height = "130vh";
+            ulForm.style.height = "120vh";
+          }
           liAtributs.appendChild(pNameClass);
           liAtributs.appendChild(label);
           liClass.appendChild(liAtributs);
