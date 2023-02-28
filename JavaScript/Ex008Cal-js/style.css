@@ -31,6 +31,7 @@ header {
 }
 
 #themeSwitcher {
+  margin: 4px;
   background-color: var(--bg-color);
   border: 0.125rem solid var(--font-color);
   color: var(--font-color);
