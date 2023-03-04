@@ -11,35 +11,37 @@
         padding: 0;
         box-sizing: border-box;
       }
-      a {
-        animation: none;
-      }
       section {
-        height: 40rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: row;
         gap: 10px;
+        align-items: center;
+        margin: 10px;
       }
       section button {
-        height: 50px;
-        width: 100px;
-        border-radius: 10px;
+        height: 2rem;
       }
-      section button:hover {
-        cursor: pointer;
+      textarea {
+        margin: 10px;
+        resize: none;
         font-weight: bold;
       }
     </style>
   </head>
   <body>
     <section>
-      <a href="newClient.html" target="_self"
-        ><button type="button" id="btnNew">Criar Novo</button></a
-      >
-      <a href="loadBase.html" target="_self"
-        ><button type="button" id="btnLoad">Carregar</button></a
-      >
+      <a href="index.html">
+        <h1>Home</h1>
+      </a>
+      <h1>Base de Dados</h1>
+      <button type="button" id="btnLoad">Carregar</button>
     </section>
+    <textarea name="textArea" id="textArea" cols="100" rows="120"></textarea>
+    <script>
+      const t = localStorage.getItem("client");
+      const text = document.querySelector("#textArea");
+
+      text.value = t;
+    </script>
   </body>
 </html>
