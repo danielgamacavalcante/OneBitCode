@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+      .sectionMain {
+        display: grid;
+      }
+      textarea {
+        resize: none;
+      }
+      form {
+        display: flex;
+        flex-direction: center;
+        gap: 10px;
+      }
+      .sectionGrid {
+        height: 50px;
+        width: 55rem;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        border: 2px solid black;
+      }
+      /* @media (max-width: 1440px) and (min-width: 470px) {
+        section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 460px) {
+        section {
+          display: grid;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <form>
+      <section class="section3">
+        <h1 style="text-align: center">Avaliação Nutricional</h1>
+        <hr />
+        <h3>Informações:</h3>
+        <label for="rcq">RCQ:</label>
+        <input type="text" id="rcq" disabled /><br /><br />
+        <label for="gordura">%Gordura:</label>
+        <input type="text" id="gordura" disabled /><br />
+      </section>
+
+      <section class="section1">
+        <section class="sectionMain">
+          <h2>Dados Pessoais:</h2>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" />
+          <label for="oldYears">Idade:</label>
+          <input type="text" id="oldYears" />
+          <label for="sexy">Sexo:</label>
+          <input type="text" id="sexy" />
+          <label for="work">Profissão:</label>
+          <input type="text" id="work" />
+        </section>
+        <section class="sectionGrid">
+          <label for="altura">Altura:</label>
+          <input type="text" id="altura" class="imc" />
+          <label for="peso">Peso:</label>
+          <input type="text" id="peso" class="imc" />
+          <label for="imc">IMC:</label>
+          <input type="text" id="imc" disabled onchange="imc()" />
+        </section>
+        <section class="sectionMain">
+          <label for="textObs">Observações/Queixas:</label>
+          <textarea name="" id="textObs" cols="30" rows="20"></textarea>
+          <button type="button" id="btnAdd">Adicionar</button>
+          <button type="button" id="btnRead">Ler</button>
+        </section>
+      </section>
+      <section class="section2">
+        <section class="sectionMain">
+          <h2>Circunferências</h2>
+          <label for="panturrilha">Panturrilha:</label>
+          <input type="text" id="panturrilha" />
+          <label for="coxa">Coxa:</label>
+          <input type="text" id="coxa" />
+          <label for="quadril">Quadril:</label>
+          <input type="text" id="quadril" />
+          <label for="abdomen">Abdômen:</label>
+          <input type="text" id="abdomen" />
+          <label for="cintura">Cintura:</label>
+          <input type="text" id="cintura" />
+          <label for="peitoral">Peitoral:</label>
+          <input type="text" id="peitoral" />
+          <label for="braco">Braço:</label>
+          <input type="text" id="braco" />
+          <label for="pulso">Pulso:</label>
+          <input type="text" id="pulso" />
+        </section>
+        <section class="sectionMain">
+          <h2>Dobras Cutâneas</h2>
+          <label for="coxaD">Coxa:</label>
+          <input type="text" id="coxaD" />
+          <label for="cintura">Cintura:</label>
+          <input type="text" id="cinturaD" />
+          <label for="abdomen">Abdômen:</label>
+          <input type="text" id="abdomenD" />
+          <label for="aquixila">Aquixila:</label>
+          <input type="text" id="aquixila" />
+          <label for="braco">Braço:</label>
+          <input type="text" id="bracoD" />
+          <label for="subescapularD">Subescapula:</label>
+          <input type="text" id="subescapulaD" />
+        </section>
+      </section>
+    </form>
+  </body>
+</html>
