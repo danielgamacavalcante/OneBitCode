@@ -13,10 +13,17 @@ const rcqElement = document.getElementById("rcq");
 const percenteGoduraD = document.getElementById("gordura");
 const subescapulaD = document.getElementById("subescapulaD");
 const coxaD = document.getElementById("coxaD");
-const cinturaD = document.getElementById("cinturaD");
+const suprailiacaD = document.getElementById("suprailiacaD");
 const abdomenD = document.getElementById("abdomenD");
-const aquixilaD = document.getElementById("aquixila");
-const bracoD = document.getElementById("bracoD");
+const axilaD = document.getElementById("axilaD");
+const bicepsD = document.getElementById("bicepsD");
+const tricepsD = document.getElementById("tricepsD");
+const peitoralD = document.getElementById("peitoralD");
+
+coxaD.addEventListener("mouseover", function () {
+  coxaD.setAttribute("");
+});
+
 function imc() {
   if (
     (weight !== "" || weight !== undefined) &&
@@ -52,10 +59,11 @@ function percentGordura() {
       if (oldYears.value >= 17 && oldYears.value <= 25) {
         let seteDobras =
           parseInt(coxaD.value) +
-          parseInt(cinturaD.value) +
+          parseInt(suprailiacaD.value) +
+          parseInt(peitoralD.value) +
           parseInt(abdomenD.value) +
-          parseInt(aquixilaD.value) +
-          parseInt(bracoD.value) +
+          parseInt(axilaD.value) +
+          parseInt(tricepsD.value) +
           parseInt(subescapulaD.value);
         console.log(seteDobras);
         let dc =
@@ -225,10 +233,11 @@ const btnAdd = document
     newClient.push("Braco Circunferência: " + bracoC + "\n");
     newClient.push("Pulso Circunferência: " + pulsoC + "\n");
     newClient.push("Coxa Dobra: " + coxaD.value + "\n");
-    newClient.push("Cintura Dobra: " + cinturaD.value + "\n");
+    newClient.push("Suprailíaca Dobra: " + suprailiacaD.value + "\n");
     newClient.push("Abdômen Dobra: " + abdomenD.value + "\n");
-    newClient.push("Aquixila Dobra: " + aquixilaD.value + "\n");
-    newClient.push("Braço Dobra: " + bracoD.value + "\n");
+    newClient.push("Axila Dobra: " + axilaD.value + "\n");
+    newClient.push("Bíceps Dobra: " + bicepsD.value + "\n");
+    newClient.push("Tríceps Dobra: " + tricepsD.value + "\n");
     newClient.push("Sub-escapula Dobra: " + subescapulaD.value + "\n");
     newClient.push("IMC: " + imcElement.value + "\n");
     newClient.push("RCQ: " + rcqElement.value + "\n");
