@@ -7,80 +7,142 @@
     <title>Document</title>
     <script src="script.js" defer></script>
     <style>
-      .sectionMain {
-        display: grid;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      textarea {
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .main .section1 h1 {
+        font-size: 30px;
+        text-align: center;
+      }
+      .section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .section1 div {
+        display: flex;
+        flex-direction: column;
+      }
+      .section2 textarea {
         resize: none;
       }
-      form {
+      .sectionMain {
         display: flex;
-        flex-direction: center;
-        gap: 10px;
-      }
-      .sectionGrid {
-        height: 50px;
-        width: 55rem;
-        margin: 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        gap: 20px;
-        border: 2px solid black;
+        align-items: center;
       }
-      /* @media (max-width: 1440px) and (min-width: 470px) {
-        section {
+
+      @media (min-width: 670px) {
+        .main {
+          display: grid;
+          grid-template-areas:
+            "sec1 sec1 sec1 "
+            "sec2 sec2 sec2 "
+            "sec3 sec3 sec3";
+        }
+        .section1,
+        .section3 {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .section1 {
+          grid-area: sec1;
+        }
+        .section1 h1 {
+          margin: 20px;
+        }
+        .section1 div {
+          display: flex;
+          flex-direction: column;
+        }
+        .section1 hr {
+          height: 100px;
+        }
+        .section2 {
+          grid-area: sec2;
+
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
+        }
+
+        .section2 #div2sec2 {
+          border: 2px solid black;
+          margin: 10px;
+          padding: 7px;
+          display: flex;
+          flex-direction: row;
+        }
+        .section3 {
+          grid-area: sec3;
+        }
+        .section3 div {
+          width: 400px;
+        }
+        .divButtons {
+          margin: 3px;
+          text-align: center;
+
+          width: 400px;
+        }
+        .section2 textarea {
+          width: 39rem;
         }
       }
-      @media (max-width: 460px) {
-        section {
-          display: grid;
-        }
-      } */
+      @media (min-width: 1025px) {
+      }
     </style>
   </head>
   <body>
     <form>
-      <section class="section3">
-        <h1 style="text-align: center">Avaliação Nutricional</h1>
-        <hr />
-        <h3>Informações:</h3>
-        <label for="rcq">RCQ:</label>
-        <input type="text" id="rcq" disabled /><br /><br />
-        <label for="gordura">%Gordura:</label>
-        <input type="text" id="gordura" disabled /><br />
-      </section>
-
-      <section class="section1">
-        <section class="sectionMain">
-          <h2>Dados Pessoais:</h2>
-          <label for="name">Nome:</label>
-          <input type="text" id="name" />
-          <label for="oldYears">Idade:</label>
-          <input type="text" id="oldYears" />
-          <label for="sexy">Sexo:</label>
-          <input type="text" id="sexy" />
-          <label for="work">Profissão:</label>
-          <input type="text" id="work" />
+      <section class="main">
+        <section class="section1">
+          <h1>Avaliação Nutricional</h1>
+          <hr />
+          <h3>Informações:</h3>
+          <div>
+            <label for="rcq">RCQ:</label>
+            <input type="text" id="rcq" disabled /><br /><br />
+            <label for="gordura">%Gordura:</label>
+            <input type="text" id="gordura" disabled /><br />
+          </div>
         </section>
-        <section class="sectionGrid">
-          <label for="altura">Altura:</label>
-          <input type="text" id="altura" class="imc" />
-          <label for="peso">Peso:</label>
-          <input type="text" id="peso" class="imc" />
-          <label for="imc">IMC:</label>
-          <input type="text" id="imc" disabled onchange="imc()" />
-        </section>
-        <section class="sectionMain">
-          <label for="textObs">Observações/Queixas:</label>
-          <textarea name="" id="textObs" cols="30" rows="20">
-Queixa: Peso.
-Objetivo: Emagrecer.
+        <section class="section2">
+          <div class="sectionMain" id="div1sec2">
+            <h2>Dados Pessoais:</h2>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" />
+            <label for="oldYears">Idade:</label>
+            <input type="text" id="oldYears" />
+            <label for="sexy">Sexo:</label>
+            <input type="text" id="sexy" />
+            <label for="work">Profissão:</label>
+            <input type="text" id="work" />
+          </div>
+          <div class="sectionMain" id="div2sec2">
+            <label for="altura">Altura:</label>
+            <input type="text" id="altura" class="imc" />
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" class="imc" />
+            <label for="imc">IMC:</label>
+            <input type="text" id="imc" disabled onchange="imc()" />
+          </div>
+          <div class="sectionMain" id="div3sec2">
+            <label for="textObs">Observações/Queixas:</label>
+            <textarea name="" id="textObs" cols="30" rows="20">
+Queixa: 
+Objetivo: 
 
 
 
@@ -96,78 +158,81 @@ Alimento que gosta bastante:
 
 Horários Livres para comer:
 Café da Manhã:
-  Local:
-  Horário:
-  Refeição:
+Local:
+Horário:
+Refeição:
 
 
 Lanche Manhã:
-  Local:
-  Horário:
-  Refeição:
+Local:
+Horário:
+Refeição:
 
 
 Almoço Manhã:
-  Local:
-  Horário:
-  Refeição:
+Local:
+Horário:
+Refeição:
 
 
 Lanche da Tarde:
-  Local:
-  Horário:
-  Refeição:
+Local:
+Horário:
+Refeição:
 
-  
+
 Jantar:
-  Local:
-  Horário:
-  Refeição:
-            </textarea
-          >
-          <button type="button" id="btnAdd">Adicionar</button>
-          <button type="button" id="btnRead">Ler</button>
+Local:
+Horário:
+Refeição:
+                </textarea
+            >
+            <button type="button" onclick="clearText()">Limpar</button>
+          </div>
         </section>
-      </section>
-      <section class="section2">
-        <section class="sectionMain">
-          <h2>Circunferências</h2>
-          <label for="panturrilha">Panturrilha:</label>
-          <input type="text" id="panturrilha" />
-          <label for="coxa">Coxa:</label>
-          <input type="text" id="coxa" />
-          <label for="quadril">Quadril:</label>
-          <input type="text" id="quadril" />
-          <label for="abdomen">Abdômen:</label>
-          <input type="text" id="abdomen" />
-          <label for="cintura">Cintura:</label>
-          <input type="text" id="cintura" />
-          <label for="peitoral">Peitoral:</label>
-          <input type="text" id="peitoral" />
-          <label for="braco">Braço:</label>
-          <input type="text" id="braco" />
-          <label for="pulso">Pulso:</label>
-          <input type="text" id="pulso" />
-        </section>
-        <section class="sectionMain">
-          <h2>Dobras Cutâneas</h2>
-
-          <label for="coxaD">*Coxa:</label>
-          <input type="text" id="coxaD" />
-          <label for="suprailiacaD">*Suprailíaca:</label>
-          <input type="text" id="suprailiacaD" />
-          <label for="abdomenD">*Abdômen:</label>
-          <input type="text" id="abdomenD" />
-          <label for="axila">*Axila Média:</label>
-          <input type="text" id="axilaD" />
-          <label for="peitoralD">*Peitoral:</label>
-          <input type="text" id="peitoralD" />
-          <label for="bicepsD">Bíceps:</label>
-          <input type="text" id="bicepsD" />
-          <label for="tricepsD">*Tríceps:</label>
-          <input type="text" id="tricepsD" />
-          <label for="subescapularD">*Subescapula:</label>
-          <input type="text" id="subescapulaD" />
+        <section class="section3">
+          <div class="sectionMain">
+            <h2>Circunferências</h2>
+            <label for="panturrilha">Panturrilha:</label>
+            <input type="text" id="panturrilha" />
+            <label for="coxa">Coxa:</label>
+            <input type="text" id="coxa" />
+            <label for="quadril">Quadril:</label>
+            <input type="text" id="quadril" />
+            <label for="abdomen">Abdômen:</label>
+            <input type="text" id="abdomen" />
+            <label for="cintura">Cintura:</label>
+            <input type="text" id="cintura" />
+            <label for="peitoral">Peitoral:</label>
+            <input type="text" id="peitoral" />
+            <label for="braco">Braço:</label>
+            <input type="text" id="braco" />
+            <label for="pulso">Pulso:</label>
+            <input type="text" id="pulso" />
+          </div>
+          <div class="sectionMain">
+            <h2>Dobras Cutâneas</h2>
+            <label for="coxaD">*Coxa:</label>
+            <input type="text" id="coxaD" />
+            <label for="suprailiacaD">*Suprailíaca:</label>
+            <input type="text" id="suprailiacaD" />
+            <label for="abdomenD">*Abdômen:</label>
+            <input type="text" id="abdomenD" />
+            <label for="axila">*Axila Média:</label>
+            <input type="text" id="axilaD" />
+            <label for="peitoralD">*Peitoral:</label>
+            <input type="text" id="peitoralD" />
+            <label for="bicepsD">Bíceps:</label>
+            <input type="text" id="bicepsD" />
+            <label for="tricepsD">*Tríceps:</label>
+            <input type="text" id="tricepsD" />
+            <label for="subescapularD">*Subescapula:</label>
+            <input type="text" id="subescapulaD" />
+            <div class="divButtons">
+              <button type="button" id="btnAdd">Adicionar</button>
+              <button type="button" id="btnRead">Ler</button>
+            </div>
+          </div>
         </section>
       </section>
     </form>
