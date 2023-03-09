@@ -42,7 +42,7 @@
         align-items: center;
       }
 
-      @media (min-width: 670px) {
+      @media (min-width: 671px) {
         .main {
           display: grid;
           grid-template-areas:
@@ -71,12 +71,14 @@
         }
         .section2 {
           grid-area: sec2;
-
           display: flex;
           flex-direction: column;
           align-items: center;
         }
-
+        .section2 #div1sec2 {
+          display: flex;
+          flex-direction: column;
+        }
         .section2 #div2sec2 {
           border: 2px solid black;
           margin: 10px;
@@ -100,8 +102,35 @@
           width: 39rem;
         }
       }
-      @media (min-width: 1025px) {
+      /* @media (min-width: 1024px) {
+        .main {
+          display: grid;
+          grid-template-areas:
+            "sec1 sec2 sec3 "
+            "sec1 sec2 sec3 ";
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+        }
       }
+      .section1 hr {
+        height: auto;
+        width: 100%;
+      }
+      .section1 {
+        display: flex;
+        flex-direction: column;
+      }
+      .section3 div {
+        width: auto;
+      }
+      .section3 {
+        display: flex;
+        flex-direction: column;
+      }
+      #div1sec2 {
+        flex-direction: row;
+      } */
     </style>
   </head>
   <body>
@@ -119,8 +148,8 @@
           </div>
         </section>
         <section class="section2">
+          <h2>Dados Pessoais:</h2>
           <div class="sectionMain" id="div1sec2">
-            <h2>Dados Pessoais:</h2>
             <label for="name">Nome:</label>
             <input type="text" id="name" />
             <label for="oldYears">Idade:</label>
@@ -213,21 +242,21 @@ Refeição:
           <div class="sectionMain">
             <h2>Dobras Cutâneas</h2>
             <label for="coxaD">*Coxa:</label>
-            <input type="text" id="coxaD" />
+            <input type="text" id="coxaD" required />
             <label for="suprailiacaD">*Suprailíaca:</label>
-            <input type="text" id="suprailiacaD" />
+            <input type="text" id="suprailiacaD" required />
             <label for="abdomenD">*Abdômen:</label>
-            <input type="text" id="abdomenD" />
+            <input type="text" id="abdomenD" required />
             <label for="axila">*Axila Média:</label>
-            <input type="text" id="axilaD" />
+            <input type="text" id="axilaD" required />
             <label for="peitoralD">*Peitoral:</label>
-            <input type="text" id="peitoralD" />
+            <input type="text" id="peitoralD" required />
             <label for="bicepsD">Bíceps:</label>
             <input type="text" id="bicepsD" />
             <label for="tricepsD">*Tríceps:</label>
-            <input type="text" id="tricepsD" />
+            <input type="text" id="tricepsD" required />
             <label for="subescapularD">*Subescapula:</label>
-            <input type="text" id="subescapulaD" />
+            <input type="text" id="subescapulaD" required />
             <div class="divButtons">
               <button type="button" id="btnAdd">Adicionar</button>
               <button type="button" id="btnRead">Ler</button>
