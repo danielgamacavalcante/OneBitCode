@@ -56,3 +56,15 @@ const mode = (...numbers) => {
 console.log(
   `Moda: ${mode(1, 34, 5, 5, 5, 54, 3, 3, 3, 3, 3, 3, 6, 6, 2, 3, 5, 5)}`
 );
+// ---------------------------------------------
+const label = (...atributes) => {
+  const element = document.createElement("label");
+  Object.assign(element, ...atributes);
+  return element;
+};
+const elemt = label({
+  id: "labelName",
+  for: "fullname",
+  TextContent: "Nome Completo",
+});
+console.log(elemt.TextContent + "\n" + elemt.id + "\n" + elemt.for);
