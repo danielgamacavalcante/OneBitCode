@@ -9,42 +9,93 @@
     <script src="assets/js/script.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav class="nav-bar">
-        <div class="logo">
-          <h1>Logo</h1>
-        </div>
-        <div class="nav-list">
+    <main data-theme="light" id="main">
+      <header>
+        <nav class="nav-bar">
+          <div class="logo">
+            <h1>Logo</h1>
+          </div>
+          <div class="nav-list">
+            <ul>
+              <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Projetos</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Cadastre-se</a>
+              </li>
+            </ul>
+            <div class="login-button">
+              <button><a href="#">Entrar</a></button>
+            </div>
+          </div>
+          <div class="mobile-menu-icon">
+            <button>
+              <img
+                onclick="menuShow()"
+                class="icon"
+                src="assets/img/icon.png"
+                alt="Icone"
+              />
+            </button>
+          </div>
+          <nav class="nav-img-model">
+            <button class="themeSwitcher">
+              <img src="assets/img/lua-notbg.png" alt="Noite" id="img-model" />
+            </button>
+          </nav>
+        </nav>
+        <div class="mobile-menu">
           <ul>
             <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Cadastre-se</a>
+            </li>
           </ul>
+          <div class="login-button">
+            <button><a href="#">Entrar</a></button>
+          </div>
         </div>
-        <div class="login-button">
-          <button><a href="#">Entrar</a></button>
+      </header>
+      <section class="section-body">
+        <div class="div-container" id="div-main">
+          <section>
+            <img class="img-section" src="assets/img/lua-notbg.png" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              libero nulla fuga pariatur, ipsum dolor corporis aliquam facere,
+              tenetur incidunt maxime debitis, nisi consequuntur facilis. Quia,
+              officia temporibus! Doloribus, est?
+            </p>
+            <img class="img-section" src="assets/img/sol-notbg.png" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              libero nulla fuga pariatur, ipsum dolor corporis aliquam facere,
+              tenetur incidunt maxime debitis, nisi consequuntur facilis. Quia,
+              officia temporibus! Doloribus, est?
+            </p>
+            <img class="img-section" src="assets/img/icon.png" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
+              libero nulla fuga pariatur, ipsum dolor corporis aliquam facere,
+              tenetur incidunt maxime debitis, nisi consequuntur facilis. Quia,
+              officia temporibus! Doloribus, est?
+            </p>
+          </section>
         </div>
-        <div class="mobile-menu-icon">
-          <button>
-            <img
-              onclick="menuShow()"
-              class="icon"
-              src="assets/img/icon.png"
-              alt="Icone"
-            />
-          </button>
+        <div class="div-container" id="div-lado">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur eum maxime voluptatum vitae et debitis, labore dolore
+            totam autem saepe. Vel ex exercitationem doloribus fuga obcaecati,
+            optio qui quia quae?
+          </p>
         </div>
-      </nav>
-      <div class="mobile-menu">
-        <ul>
-          <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-        </ul>
-        <div class="login-button">
-          <button><a href="#">Entrar</a></button>
-        </div>
-      </div>
-    </header>
+      </section>
+      <footer class="footer"></footer>
+    </main>
   </body>
 </html>
