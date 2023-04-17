@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu Responsivo</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/sol-notbg.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/script.js" defer></script>
   </head>
@@ -40,11 +52,9 @@
               />
             </button>
           </div>
-          <nav class="nav-img-model">
-            <button class="themeSwitcher">
-              <img src="assets/img/lua-notbg.png" alt="Noite" id="img-model" />
-            </button>
-          </nav>
+          <div class="nav-img-model themeSwitcher">
+            <img src="assets/img/lua-notbg.png" alt="Noite" id="img-model" />
+          </div>
         </nav>
         <div class="mobile-menu">
           <ul>
@@ -95,7 +105,57 @@
           </p>
         </div>
       </section>
-      <footer class="footer"></footer>
+      <footer>
+        <div id="footer-content">
+          <div id="footer-contacts">
+            <h1>Logo</h1>
+            <p>It's all about your dreams.</p>
+            <div id="footer-social-media">
+              <a href="#" class="footer-link" id="instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="footer-link" id="facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" class="footer-link" id="whatsapp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        
+          <div>
+            <ul class="footer-list">
+              <li><h3>Blog</h3></li>
+              <li><a href="#" class="footer-link">Tech</a></li>
+              <li><a href="#" class="footer-link">Adventures</a></li>
+              <li><a href="#" class="footer-link">Music</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul class="footer-list">
+              <li><h3>Products</h3></li>
+              <li><a href="#" class="footer-link">App</a></li>
+              <li><a href="#" class="footer-link">Desktop</a></li>
+              <li><a href="#" class="footer-link">Cloud</a></li>
+            </ul>
+          </div>
+          <div>
+            <div id="footer-subscribe">
+              <h3>Subscribe</h3>
+              <p>Enter your e-mail to get notified about our news solutions</p>
+            </div>
+            <div id="input-group">
+              <input type="email" id="email" /><button>
+                <i class="fa-regular fa-envelope"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div id="footer-copyright">&#169 2023 all rights reserver</div>
+        
+      
+      </footer>
     </main>
   </body>
 </html>
