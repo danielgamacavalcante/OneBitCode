@@ -29,7 +29,7 @@ document.querySelector(".themeSwitcher").addEventListener("click", function () {
     root.style.setProperty("--color-background-body", "#f4f4f75d");
     root.style.setProperty("--color-background-header", "#3031313a");
     root.style.setProperty("--color-backgroud-button", "#0187a7");
-    root.style.setProperty("--color-btn-hover", " #7c2bce");
+    root.style.setProperty("--color-btn-hover", "#03bceb");
     main.dataset.theme = "light";
     document.querySelector("#img-model").src = imgMoon;
   }
