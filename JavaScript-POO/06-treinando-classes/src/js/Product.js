@@ -1,9 +1,11 @@
 class Product {
-  constructor(name, description, price) {
+  constructor(name, description, priceOriginal) {
     this.name = name;
     this.description = description;
-    this.price = price;
+    this.priceOriginal = priceOriginal;
     this.inStock = 0;
+    this.discontPrice = priceOriginal;
+    this.discontGiven = 0;
   }
 
   addToStock(quantity) {
@@ -11,13 +13,9 @@ class Product {
   }
 
   calculateDiscount(discount) {
-    return this.price * ((100 - discount) / 100);
+    this.discontGiven = discount;
+    return (this.discontPrice =
+      this.priceOriginal * ((100 - this.discontGiven) / 100));
   }
 }
-
-const watch = new Product("Relógio de Pulso", "....", 100);
-watch.addToStock(99);
-
-console.log(watch);
-
-console.log("Valor com desconto " + watch.calculateDiscount(10));
+module.exports = Product;

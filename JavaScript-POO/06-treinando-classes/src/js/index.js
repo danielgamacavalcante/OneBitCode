@@ -1,5 +1,16 @@
-// import User from "./User.js";
+const User = require("./User");
+const Product = require("./Product");
 
-// const user = new User("Daniel G", 1234, "daniel-gama92@hotmail.com");
+const tv = new Product("Panasonic", "TV LCD 32", 1500);
+const watch = new Product(
+  "Relógio de Bolso",
+  "Relógigo estilo para bolso",
+  1000
+);
+const jose = new User("Jose Sobral", 1234, "jose@email.com");
 
-// user.login("daniel-gama92@hotmail.com", 1234);
+jose.shoppingCart.push(tv);
+
+watch.calculateDiscount(10);
+jose.shoppingCart.push(watch);
+console.log(jose);
