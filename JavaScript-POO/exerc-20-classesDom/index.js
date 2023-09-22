@@ -11,7 +11,7 @@ class Component {
     Object.assign(this.#elementDom, this.options);
     return this;
   }
-  getElementDom() {
-    return alert(this.#elementDom);
+  getElement() {
+    return this.#elementDom;
   }
 }
