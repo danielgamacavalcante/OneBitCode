@@ -91,6 +91,10 @@ h2 {
   margin: 0 auto;
   text-align: justify;
 }
+/* .fundo-aqua {
+  background-color: rgb(44, 142, 101);
+} */
+
 #duvidas {
   display: flex;
   align-items: center;
@@ -110,6 +114,9 @@ h2 {
   border-left: 1px solid #ff715e;
   margin-top: -15px;
 }
+.fundo-azul {
+  background-color: aqua;
+}
 .duvida {
   position: relative;
 }
@@ -123,4 +130,43 @@ h2 {
   position: absolute;
   top: 32px;
   right: 24px;
+}
+footer {
+  background-color: rgba(255, 152, 108, 0.25);
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px 30px;
+}
+footer img,
+.titulo {
+  /* utilizando block (bloco) pois a tag <strong> vem por padrão display: Inline  */
+  display: block;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+footer nav a {
+  color: #263138;
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  max-width: 350px;
+}
+footer p {
+  margin-bottom: 10px;
+  max-width: 350px;
+}
+footer p a {
+  color: #263138;
+  text-decoration: none;
+}
+#copyright {
+  background-color: #263138;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+#copyright a {
+  color: #ff725e;
 }
