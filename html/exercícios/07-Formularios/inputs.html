@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de Inputs</title>
+  </head>
+  <body>
+    <main>
+      <h1>Tipos de Inputs</h1>
+      <hr />
+      <form>
+        <!-- Campo de Texto -->
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Informe seu nome"
+        /><br /><br />
+        <!-- Campo de Email -->
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Informe seu email"
+          required
+        />
+        <br /><br />
+        <!-- Campo de Senha -->
+        <label for="password">Senha:</label>
+        <input type="password" name="password" id="password" /><br /><br />
+        <hr />
+        <!-- Campo de Seleção de Radio -->
+        <label><h2>Gênero:</h2> </label>
+        <input type="radio" name="genero" id="woman" value="woman" />
+        <label for="woman">Feminino</label>
+        <input type="radio" name="genero" id="man" value="man" />
+        <label for="man">Masculino</label> <br /><br />
+        <hr />
+        <!-- Campo de Seleção múltipla checkbox -->
+        <label><h2>Interesses:</h2></label>
+        <input type="checkbox" name="interest" id="backend" value="backend" />
+        <label for="backend">Back-End</label>
+        <input type="checkbox" name="interest" id="frontend" value="frontend" />
+        <label for="frontend">Front-End</label>
+        <input type="checkbox" name="interest" id="mobile" value="mobile" />
+        <label for="mobile">Mobile</label> <br /><br />
+        <hr />
+        <!-- Data -->
+        <label for="dateOfbirth">Data de nascimento:</label>
+        <input type="date" name="birth" id="dateOfbirth" /><br /><br />
+        <hr />
+        <!-- Campo de Arquivo (Uploads) -->
+        <label for="photo">Foto de Perfil:</label>
+        <input type="file" name="photoProfile" id="photo" />
+        <br /><br />
+        <hr />
+        <!-- Campo de Caixa de Seleção -->
+        <label for="situation">Situação Atual:</label>
+        <select name="situation" id="situation">
+          <option value="" selected disabled>Selecione uma das opções</option>
+          <option value="estudante">
+            Estudando para me tornar um programador
+          </option>
+          <option value="estagiario">Atuando como estagiário/trainer</option>
+          <option value="junior">Atuando como desenvolvedor júnior</option>
+          <option value="pleno">Atuando como desenvolvedor pleno</option>
+          <option value="senior">Atuado como desenvolverdo sênior</option>
+        </select>
+        <br /><br />
+        <!-- Campo de área de texto de múltiplas linhas -->
+        <label for="about">Sobre mim:</label><br />
+        <textarea
+          name="about"
+          id="about"
+          cols="30"
+          rows="10"
+          placeholder="Fale um pouco sobre você..."
+        ></textarea>
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+  </body>
+</html>

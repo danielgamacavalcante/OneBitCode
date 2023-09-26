@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Inscrição</title>
+  </head>
+  <body>
+    <main>
+      <h1>Formulário de Inscrição</h1>
+      <form action="#">
+        <label for="name">Nome *:</label><br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Ex:Jaco"
+          required
+        /><br /><br />
+        <label for="email">Email *:</label><br />
+        <input type="email" name="email" id="email" required /><br /><br />
+        <label for="cellphone">Telefone/Whatsapp *:</label><br />
+        <input
+          type="tel"
+          name="cellphone"
+          id="cellphone"
+          placeholder="(99) 99999-9999"
+          pattern="\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
+          required
+        /><br /><br />
+        <label><h3>Área de Atuação *:</h3></label>
+        <input
+          type="radio"
+          name="acting"
+          id="development"
+          value="development"
+          required
+        />
+        <label for="development">Desenvolvimento</label> |
+        <input type="radio" name="acting" id="quality" value="quality" />
+        <label for="quality">Quality</label> |
+        <input type="radio" name="acting" id="assurance" value="assurance" />
+        <label for="assurance">Assurance (QA)</label> |
+        <input
+          type="radio"
+          name="acting"
+          id="datasciences"
+          value="datasciences"
+        />
+        <label for="datasciences">Ciências de Dados</label> |
+        <input
+          type="radio"
+          name="acting"
+          id="infrastructure"
+          value="infrastructure"
+        />
+        <label for="infrastructure">Infraestrutura</label>
+        <br /><br />
+        <label for=""><h3>Observações:</h3></label>
+        <textarea
+          name="observation"
+          id="observation"
+          cols="30"
+          rows="10"
+          placeholder="caso tenha..."
+        ></textarea>
+        <br /><br />
+        <input type="checkbox" name="term" id="term" />
+        <label for="term">Desejo receber novidades e ofertas por email.</label>
+        <button type="submit">Enviar</button>
+        <!-- <input type="submit" value="Enviar" /> -->
+      </form>
+    </main>
+  </body>
+</html>
