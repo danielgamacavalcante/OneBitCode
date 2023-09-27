@@ -31,7 +31,7 @@
   border: 3px solid white;
   border-radius: 8px;
   padding: 6px;
-  transition: 1s;
+  transition: 0.4s;
 }
 .anchor-header:hover {
   border: 3px solid rgb(214, 24, 24);
@@ -42,17 +42,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 30vh;
+  gap: 50vh;
   flex-wrap: wrap;
 }
-
-@media screen and (max-width: 1002px) {
+@media screen and (max-width: 1270px) {
   .container-header {
     gap: 5vh;
   }
 }
+/* @media screen and (max-width: 1002px) {
+  .container-header {
+    gap: 5vh;
+  } */
+/* } */
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 690px) {
   .container-header {
     height: auto;
     justify-content: center;

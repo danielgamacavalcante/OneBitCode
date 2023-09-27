@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.body-container {
+  border: 2px solid black;
+  flex-basis: 100%;
+  background-color: rgba(234, 234, 247, 0.434);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+  /* flex-grow: 1; */
+}
+.header-container {
+  flex-basis: 80px;
+  background-color: aqua;
+  display: flex;
+  padding: 10px 15px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 5px black;
+}
+.main-container {
+  flex-basis: 400px;
+  background-color: whitesmoke;
+  /* Flex-grow: quando 1 vai buscar atingir todo tamanho na horizontal - Padrão normal é 0 */
+  flex: 1 0 800px;
+  display: flex;
+  margin-top: 10px;
+}
+.section-1 {
+  background-color: rgb(19, 82, 44);
+  flex-grow: 5;
+}
+.section-2 {
+  background-color: brown;
+  flex-grow: 1;
+}
+.footer-container {
+  flex-basis: 70px;
+  background-color: aquamarine;
+}
