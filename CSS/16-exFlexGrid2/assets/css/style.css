@@ -1,0 +1,204 @@
+/* -------------------------------------------------------------------------GERAL---------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Montserrat:wght@400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.body-container {
+  display: flex;
+  flex-direction: column;
+}
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  color: #1e262c;
+  text-shadow: 0px 0px 1px darkgrey;
+}
+p {
+  font-weight: 500;
+  color: #4f585d;
+  font-size: large;
+  text-align: justify;
+}
+/* -------------------------------------------------------------------------HEADER---------------------------------------------------------- */
+.header-container {
+  background-color: #ff9a6c;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  box-shadow: 0px 0px 5px darkgrey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.nav-header {
+  display: flex;
+  gap: 35px;
+  padding: 15px;
+}
+.nav-header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 0px 0px 3px rgb(24, 21, 21);
+  text-transform: uppercase;
+}
+.nav-header a:hover {
+  /* color: #4f4d4d; */
+  text-shadow: 0px 0px 5px rgb(24, 21, 21);
+  text-decoration: underline;
+}
+/* -------------------------------------------------------------------------MAIN---------------------------------------------------------- */
+.main-container {
+  flex: 1 0 auto;
+}
+/* -------------------------------------------------------------------------MAIN START---------------------------------------------------------- */
+#start-section-main {
+  display: flex;
+  justify-content: center;
+  padding: 20px 70px 120px 80px;
+  margin-top: 55px;
+  position: relative;
+}
+.div-start-main {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.img-start-main {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+.div-start-main p {
+  padding: 10px 15px 10px 15px;
+}
+#divbtn-start-section-main {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#querybtn-start-section-main {
+  padding: 20px 15px 20px 15px;
+  border-radius: 10px;
+  background-color: #ff725e;
+  /* margin-right: 25px; */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+/* -------------------------------------------------------------------------MAIN CLINIC---------------------------------------------------------- */
+#clinic-section-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 70px 100px 80px;
+  gap: 20px;
+}
+
+#div-clinic-section-main {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#div-clinic-section-main li {
+  padding: 10px;
+}
+/* -------------------------------------------------------------------------SHOP CLINIC---------------------------------------------------------- */
+#shop-section-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px 70px 100px 80px;
+  gap: 20px;
+}
+/* ---------------------------------------------------------------------------FAQ----------------------------------------------------------------- */
+#faq-section-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 65px 70px 100px 80px;
+  gap: 30px;
+}
+#div-faq-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* -------------------------------------------------------------------------FOOTER---------------------------------------------------------- */
+.footer-container {
+  background-color: rgba(255, 152, 108, 0.25);
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  /* gap: 40px; */
+  padding: 10px 15px 10px 15px;
+}
+.div-footer a {
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 30px;
+  background-color: aqua;
+}
+#div-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#img-logofooter {
+  padding-bottom: 10px;
+}
+/* #div-footer-contact {
+  background-color: #ff725e;
+}
+.div {
+  background-color: aqua;
+} */
+/* ---------------------------------------------------------------------------MEDIA--------------------------------------------------------------- */
+@media screen and (max-width: 1145px) {
+  #start-section-main {
+    flex-wrap: wrap;
+  }
+  .footer-container {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  #div-footer-contact {
+    /* background-color: #ff725e; */
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1136px) {
+  #faq-section-main {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1123px) {
+  #clinic-section-main {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 865px) {
+  .footer-container {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
