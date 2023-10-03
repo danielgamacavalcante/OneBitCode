@@ -36,6 +36,12 @@ p {
   width: 100%;
   z-index: 10;
 }
+.header-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .nav-header {
   display: flex;
   gap: 35px;
@@ -151,7 +157,6 @@ p {
   text-decoration: none;
   font-weight: 600;
   line-height: 30px;
-  background-color: aqua;
 }
 #div-footer-contact {
   display: flex;
@@ -192,6 +197,7 @@ p {
 @media screen and (max-width: 1123px) {
   #clinic-section-main {
     align-items: center;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
   }
 }

@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Montserrat:wght@400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+}
+/* -------------------------------------------------------------------------HEADER---------------------------------------------------------- */
+.header-container {
+  background-color: #ff9a6c;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  /* box-shadow: 0px 0px 5px darkgrey; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 10;
+}
+.header-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-header {
+  display: flex;
+  gap: 35px;
+  padding: 15px;
+}
+
+.nav-header a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-shadow: 0px 0px 3px rgb(24, 21, 21);
+  text-transform: uppercase;
+}
+.nav-header a:hover {
+  text-shadow: 0px 0px 5px rgb(24, 21, 21);
+  text-decoration: underline;
+}
+/* ---------------------------------------------------------------------------MAIN CONTAINER--------------------------------------------------- */
+body {
+  background-color: #ff9b6c66;
+}
+.div-main-section {
+  margin-top: 60px;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0px 0px 5px rgb(19, 19, 19);
+  display: flex;
+  /* justify-content: space-between; */
+  min-height: 100vh;
+  padding: 10px 100px 90px 100px;
+  gap: 60px;
+}
+.main-container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-container h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.main-container.social-media {
+  background-color: rgb(67, 113, 113);
+  display: flex;
+  align-content: center;
+  gap: 20px;
+}
+
+.social-media a {
+  text-decoration: none;
+}
+.img-main {
+  width: 36px;
+  margin-left: 3rem;
+}
+.social-media a:first-child img {
+  margin-left: 0;
+}
+.social-media .alternative span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  position: relative;
+}
+.social-media .alternative span::before,
+.social-media .alternative span::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 20px;
+  background: rgb(17, 16, 16);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ff9a6c;
+  border-radius: 5px;
+  border: 1px solid #ff9b6c32;
+  box-shadow: 0px 0px 2px rgb(146, 146, 146);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+}
+.form label span {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.form input {
+  background: #1e222f;
+  width: 300px;
+  height: 50px;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  border: 1px solid #040b18;
+  border-radius: 8px;
+}
+.form input[type="submit"] {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 1rem;
+  border: none;
+  border: 1px solid #646669;
+  box-shadow: 0px 0px 1px rgb(55, 54, 54);
+  background: #6c63ff;
+  transition: all 0.3s ease-in-out;
+}
+.form input[type="submit"]:hover {
+  background: #5952d4;
+}
+/* ---------------------------------------------------------------------------SECTION------------------------------------------------------------- */
+.images {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem;
+  width: 90%;
+}
+@media screen and (max-width: 1010px) {
+  .div-main-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
