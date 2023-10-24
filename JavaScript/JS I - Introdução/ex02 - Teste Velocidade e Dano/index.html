@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <script src="damage.js" defer></script>
+    <title>Velocidade e Dano</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .div-container1 {
+        display: flex;
+        gap: 10px;
+        padding: 5px;
+      }
+      .div-container2 {
+        display: flex;
+        gap: 10px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Velocidade e Dano</h1>
+      <form id="formCar">
+        <h2>Velocidade</h2>
+        <div class="div-container1">
+          <label for="nameCar1">Nome do Primeiro carro: </label>
+          <input type="text" name="nameCar1" id="nameCar1" />
+          <label for="speedCar1">Velocidade do Carro: </label>
+          <input
+            type="number"
+            name="speedCar1"
+            id="speedCar1"
+            placeholder="0"
+          />
+        </div>
+        <div class="div-container1">
+          <label for="nameCar2">Nome do Segundo carro: </label>
+          <input type="text" name="nameCar2" id="nameCar2" />
+          <label for="speedCar2">Velocidade do Carro: </label>
+          <input
+            type="number"
+            name="speedCar2"
+            id="speedCar2"
+            placeholder="0"
+          />
+          <label for="moreSpeed">Mais Rápido:</label>
+          <input type="text" name="moreSpeed" id="moreSpeed" disabled />
+        </div>
+        <button type="submit">Calcular</button>
+      </form>
+      <hr />
+      <h2>Dano</h2>
+      <form id="formDamage">
+        <div>
+          <label for="nameCharacter">Nome do Personagem: </label>
+          <input type="text" name="nameCharacter" id="nameCharacter" />
+          <label for="lifeCharacter">Vida do Personagem:</label>
+          <input type="number" name="lifeCharacter" id="lifeCharacter" />
+        </div>
+        <div class="div-container2">
+          <label for="nameAtk">Nome do Ataque: </label>
+          <input type="text" name="nameAtk" id="nameAtk" />
+          <label for="atakCharacter">Dano de Ataque: </label>
+          <input type="number" name="atakCharacter" id="atakCharacter" />
+        </div>
+        <div class="div-container2">
+          <label for="validShield">Escudo válido ou não: </label>
+          <input type="text" name="validShield" id="validShield" disabled />
+          <button type="click" id="btnShieldExist">Validar</button>
+          <label for="shieldDef">Escudo válido ou não: </label>
+          <input type="number" name="shieldDef" id="shieldDef" disabled />
+          <button type="click" id="shieldDefCreate">Defesa Aleatório</button>
+        </div>
+        <hr />
+        <div class="div-container2">
+          <label for="nameCharacter2">Nome do Personagem: </label>
+          <input type="text" name="nameCharacter2" id="nameCharacter2" />
+          <label for="lifeCharacter2">Vida do Personagem:</label>
+          <input type="number" name="lifeCharacter2" id="lifeCharacter2" />
+        </div>
+        <div class="div-container2">
+          <label for="nameAtk2">Nome do Ataque: </label>
+          <input type="text" name="nameAtk2" id="nameAtk2" />
+          <label for="atakCharacter2">Dano de Ataque: </label>
+          <input type="number" name="atakCharacter2" id="atakCharacter2" />
+        </div>
+        <div class="div-container2">
+          <label for="validShield2">Escudo válido ou não: </label>
+          <input type="text" name="validShield2" id="validShield2" disabled />
+          <button type="click" id="btnShieldExist2">Validar</button>
+          <label for="shieldDef2">Escudo válido ou não: </label>
+          <input type="number" name="shieldDef2" id="shieldDef2" disabled />
+          <button type="click" id="shieldDefCreate2">Defesa Aleatório</button>
+        </div>
+        <hr />
+        <button type="submit" name="btnBattle" id="btnBattle">Batalhar</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

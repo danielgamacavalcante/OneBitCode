@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <script src="numbers.js" defer></script>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form id="orderForm">
+        <h1>Candidato</h1>
+        <hr />
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" />
+        <strong>Aniversário:</strong>
+        <label for="date">Data:</label>
+        <input type="date" name="date" id="date" />
+        <label for="fildOfStudy"><strong>Campo de Estudo</strong></label>
+        <select name="fildOfStudy" id="fildOfStudy">
+          <option selected disabled>Selecione uma opção...</option>
+          <option value="Front-End">Front-End</option>
+          <option value="Back-End">Back-End</option>
+          <option value="FullStack">FullStack</option>
+          <option value="Mobile">Mobile</option>
+        </select>
+        <button type="submit" id="btnSend">Idade</button>
+      </form>
+      <hr />
+      <strong>Calculador:</strong>
+      <form id="calculateNumbers">
+        <label for="number1">Número 1:</label>
+        <input type="number" name="number1" id="number1" />
+        <label for="number2">Número 2:</label>
+        <input type="number" name="number2" id="number2" />
+        <button type="submit" id="btnCalculateNumbers">Calcular</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

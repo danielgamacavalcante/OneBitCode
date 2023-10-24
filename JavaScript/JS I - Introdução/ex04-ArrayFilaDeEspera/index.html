@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fila de Pacientes</title>
+    <script src="index.js" defer></script>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Lista de Pacientes</h1>
+      <form>
+        <textarea
+          name=""
+          id="listPatient"
+          cols="30"
+          rows="10"
+          disabled
+          style="resize: none"
+        ></textarea>
+        <button type="click" id="btnCreate">Gerar</button>
+        <div>
+          <label for="newPatient">Novo Paciente:</label>
+          <input type="text" name="newPatient" id="newPatient" />
+          <button type="click" id="btnNewPatient">Criar</button>
+        </div>
+        <div>
+          <label for="queryPatient">Consultar Paciente:</label>
+          <input type="text" name="queryPatient" id="queryPatient" />
+          <button type="click" id="btnQueryPatient">Consulta</button>
+        </div>
+        <button type="submit" id="out">Sair</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
