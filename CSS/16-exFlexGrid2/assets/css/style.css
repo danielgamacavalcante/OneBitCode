@@ -163,6 +163,14 @@ p {
   flex-direction: column;
   gap: 10px;
 }
+#div-footer-content-a {
+  display: flex;
+  gap: 10px;
+}
+#div-footer-content-a div {
+  display: flex;
+  flex-direction: column;
+}
 #img-logofooter {
   padding-bottom: 10px;
 }
@@ -184,7 +192,7 @@ p {
   #div-footer-contact {
     /* background-color: #ff725e; */
     padding: 10px;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
   }

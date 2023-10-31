@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <title>Document</title>
+    <style>
+      #div-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div id="div-container">
+        <h1>Lista de Imóveis:</h1>
+        <textarea
+          name="textAreaImmobile"
+          id="textAreaImmobile"
+          cols="30"
+          rows="10"
+          disabled
+        ></textarea>
+        <form id="formNewImmobile">
+          <h2>Salvar Imóvel</h2>
+          <label for="ownerName">Nome do Proprietário:</label>
+          <input
+            type="text"
+            name="ownerName"
+            id="ownerName"
+            class="inputs"
+            placeholder="Informe aqui, nome do proprietário..."
+          />
+          <label for="numberOfRooms">Nome de Quartos:</label>
+          <input
+            type="number"
+            name="numberOfRooms"
+            id="numberOfRooms"
+            class="inputs"
+            placeholder="Informe aqui, quantiade de quartos..."
+          />
+          <label for="numberOfBathrooms">Quantiade de Banheiros:</label>
+          <input
+            type="number"
+            name="numberOfBathrooms"
+            id="numberOfBathrooms"
+            class="inputs"
+            placeholder="Informe aqui, quantiade de banheiros..."
+          />
+          <div>
+            <h2>Possui Garagem?</h2>
+            <input type="radio" name="garage" id="garage" value="sim" />
+            <label for="garage">Sim</label>
+            <input type="radio" name="garage" id="notGarage" value="nao" />
+            <label for="notGarage">Não</label>
+          </div>
+
+          <button type="click" id="btnSaveImmobile">Salvar Imóvel</button>
+        </form>
+        <button type="click" id="btnGenerate">Gerar</button>
+        <button type="click" id="btnExit">Sair</button>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
